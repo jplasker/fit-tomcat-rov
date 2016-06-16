@@ -1,0 +1,1019 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+end_init CODE 0 14 14 4 1
+reset_vec CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\Tomcat_Surface.X.production.obj
+intcode CODE 0 8 8 C 1
+smallconst SMALLCONST 0 600 600 E4 1
+intcode_body CODE 0 1190 1190 8E 1
+text24 CODE 0 171E 171E 12 1
+text23 CODE 0 16D8 16D8 1A 1
+text22 CODE 0 1550 1550 3C 1
+text21 CODE 0 135A 135A 5C 1
+text20 CODE 0 F04 F04 106 1
+text19 CODE 0 1290 1290 6A 1
+text18 CODE 0 15C6 15C6 3A 1
+text17 CODE 0 121E 121E 72 1
+text16 CODE 0 14BC 14BC 4E 1
+text15 CODE 0 1688 1688 2A 1
+text14 CODE 0 100A 100A CE 1
+text13 CODE 0 165E 165E 2A 1
+text12 CODE 0 1634 1634 2A 1
+text11 CODE 0 170A 170A 14 1
+text10 CODE 0 16B2 16B2 26 1
+text9 CODE 0 1600 1600 34 1
+text8 CODE 0 1466 1466 56 1
+text7 CODE 0 150A 150A 46 1
+text6 CODE 0 D9E D9E 166 1
+text5 CODE 0 158C 158C 3A 1
+text4 CODE 0 12FA 12FA 60 1
+text3 CODE 0 140E 140E 58 1
+text2 CODE 0 13B6 13B6 58 1
+text1 CODE 0 10D8 10D8 B8 1
+text0 CODE 0 6E4 6E4 6BA 1
+cstackCOMRAM COMRAM 1 1 1 45 1
+cstackBANK1 BANK1 1 100 100 A4 1
+bssBANK1 BANK1 1 1A4 1A4 2 1
+bssCOMRAM COMRAM 1 46 46 4 1
+cinit CODE 0 16F2 16F2 18 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 000080-0000FF 1
+BANK1 0001A6-0001FF 1
+BANK2 000200-0002FF 1
+BANK3 000300-0003FF 1
+BANK4 000400-0004FF 1
+BANK5 000500-0005FF 1
+BIGRAM 00004A-0000FF 1
+BIGRAM 0001A6-0005FF 1
+CODE 000004-000007 1
+CODE 000018-0005FF 1
+CODE 001730-007FFF 1
+COMRAM 00004A-00007F 1
+CONST 000004-000007 1
+CONST 000018-0005FF 1
+CONST 001730-007FFF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 001730-007FFF 1
+RAM 000080-0000FF 1
+RAM 0001A6-0005FF 1
+SFR 000F80-000FFF 1
+SMALLCONST 001730-007FFF 1
+STACK 0001A6-0005FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Tomcat_Surface.X.production.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":21 8 intcode CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":28 8 intcode CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":39 6E4 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":42 6E4 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":45 700 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":46 70E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":49 71C text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":50 71E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":51 722 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":52 726 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":53 72A text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":54 72E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":56 730 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":57 732 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":58 736 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":59 73A text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":60 73E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":61 740 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":67 744 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":74 752 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":75 76E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":76 78A text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":77 7B8 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":78 7EE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":79 80A text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":80 826 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":81 832 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":82 83E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":83 852 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":84 866 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":89 87E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":90 88C text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":91 8AE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":90 8F2 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":94 8FC text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":96 964 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":100 974 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":103 97E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":104 99E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":105 9B6 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":106 9D6 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":107 9EE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":108 A0E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":109 A26 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":110 A46 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":111 A5E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":112 A7E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":113 A96 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":114 AB6 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":115 ACE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":116 AEE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":118 B06 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":124 B12 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":125 B3A text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":132 B6E text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":133 B86 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":134 BA6 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":135 BBE text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":137 BE0 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":138 C00 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":144 C34 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":145 C54 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":149 C88 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":150 C8C text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":151 CA2 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":152 CB8 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":183 CB8 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":184 CD0 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":185 D04 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":186 D1C text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":187 D50 text0 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":188 D68 text0 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":492 D9E text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":542 D9E text6 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":190 D9E text0 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":545 DA6 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":547 DA8 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":550 DB0 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":551 DC0 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":557 DC2 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":644 DCA text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1268 DF0 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1270 E08 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1271 E1C text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1272 E20 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1314 E28 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1315 E38 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1314 E60 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1447 E64 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1448 E70 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1481 E80 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1483 E84 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1498 E86 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1533 EC8 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1483 ED8 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":545 EE0 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1547 EF6 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\doprnt.c":1550 F02 text6 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":51 F04 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":53 F04 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":54 F06 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":55 F08 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":56 F0A text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":57 F20 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":58 F2E text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":59 F3C text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":60 F4A text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":61 F4C text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":62 F5A text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":63 F68 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":64 F76 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":65 F7C text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":66 F82 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":67 F88 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":68 F8E text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":69 F94 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":70 F9A text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":71 FA0 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":73 FA6 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":74 FAC text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":75 FAE text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":76 FB4 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":77 FBA text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":78 FC0 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":79 FC6 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":80 FCC text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":81 FD2 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":82 FD8 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":83 FDE text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":84 FE4 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":85 FEA text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":86 FF8 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":87 1006 text20 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":88 1008 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":5 100A text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":10 100A text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":11 100C text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":10 1010 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":12 1030 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":13 1038 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":14 1040 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":15 104E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":17 1052 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":20 1062 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":19 109C text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":21 10AE text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":22 10B4 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":23 10CE text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\atoi.c":24 10D6 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":8 10D8 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":18 10D8 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":19 10E0 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":20 10E8 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":21 10F0 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":22 10FA text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":23 111A text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":24 1128 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":25 113A text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":26 115E text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":27 116C text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":29 117E text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":30 1186 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strtok.c":31 118E text1 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":28 1190 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":29 11C2 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":31 11C4 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":32 11C8 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":33 11CC intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":36 11E2 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":37 11E4 intcode_body CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":4 121E text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":6 1222 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":7 1254 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":8 1258 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":9 1266 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":10 1268 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":11 126E text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":13 1274 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":14 127A text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":16 1280 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":17 1286 text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":18 128C text17 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":19 128E text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":73 1290 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":75 1294 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":76 1298 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":78 129C text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":79 129E text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":81 12A0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":83 12A4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":84 12A6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":87 12A8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":88 12AA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":90 12AC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":91 12B0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":92 12B4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":93 12B4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":95 12B6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":96 12B8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":98 12BA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":100 12BC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":101 12BE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":103 12C0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":104 12C4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":105 12C8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":106 12C8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":108 12CA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":110 12CC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":111 12D0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":112 12D4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":113 12D4 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":115 12D6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":116 12DA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":118 12E8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":119 12EA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":137 12EC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":138 12F0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":139 12F6 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uopen.c":143 12F8 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":4 12FA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":6 12FA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":7 12FA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":8 1310 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":9 131E text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":10 134C text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strchr.c":11 1358 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":14 135A text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":16 135E text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":17 1362 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":18 1366 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":19 136A text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":21 136E text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":23 1370 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":24 1370 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":25 1372 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":26 1374 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":27 1374 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":30 1376 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":31 1376 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":32 1378 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":21 137A text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":39 1390 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":41 1390 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":42 1392 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":60 1394 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":62 1396 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":64 1396 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":72 1398 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":74 139A text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":76 139A text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":85 139C text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":37 139E text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":86 13AE text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":97 13AE text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":98 13B0 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":101 13B2 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_open.c":102 13B4 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":4 13B6 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":8 13B6 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":9 13BE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":10 13C0 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":11 13C4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":9 13C8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":13 1404 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strspn.c":14 140C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":4 140E text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":8 140E text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":9 1416 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":10 1418 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":11 141C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":9 1420 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":13 145C text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strcspn.c":14 1464 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":8 1466 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":14 1466 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":15 146E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":16 1476 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":17 147E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":18 1480 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":19 1486 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":17 1488 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":22 148C text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":23 1492 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":24 149E text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":25 14A6 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":27 14A8 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":28 14AE text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":29 14B2 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":30 14B2 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwdiv.c":31 14BA text8 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":118 14BC text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":121 14BC text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":122 14C4 text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":123 14C6 text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":124 14FA text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":125 14FC text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":122 1500 text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":129 1506 text16 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":122 1508 text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":8 150A text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":13 150A text7 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":129 150A text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":14 1512 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":15 151A text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":16 151C text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":17 1522 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":15 1524 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":20 1528 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":21 1534 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":22 153C text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":23 1542 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":24 1546 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":25 1546 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\lwmod.c":26 154E text7 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":89 1550 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":91 1554 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":92 155C text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":93 155E text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":94 1564 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":95 156A text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":97 1570 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":101 1576 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":103 157C text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":104 1582 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":105 1588 text22 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\OSD.c":106 158A text22 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":4 158C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":8 158C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":9 1594 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":10 1596 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":9 159A text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":12 15A8 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\strlen.c":13 15C4 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":4 15C6 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":14 15C6 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":15 15D2 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":16 15E4 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":30 15F6 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\wmul.c":31 15FE text18 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":201 1600 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":202 1604 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":203 160C text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":204 1614 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":205 1626 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":206 1628 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":207 162C text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":208 1630 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":209 1632 text9 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":223 1634 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":225 1634 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":226 1638 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":227 1640 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":228 1644 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":230 164C text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":231 1654 text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":232 165C text12 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":211 165E text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":213 165E text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":214 1662 text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":215 166A text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":216 166E text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":218 1676 text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":219 167E text13 CODE
+"C:\Users\Mike\MPLABXProjects\Tomcat_Surface.X\Tomcat_S_main.c":221 1686 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\isdigit.c":8 1688 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\isdigit.c":14 168C text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\common\isdigit.c":15 16B0 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":14 16B2 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":18 16B2 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":19 16B6 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":20 16C4 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":21 16D4 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":20 16D6 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":13 16D8 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uputs.c":21 16D8 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":16 16DC text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":17 16E0 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":18 16E2 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":19 16E4 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":20 16E8 text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":24 16EC text23 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_writ.c":26 16F0 text23 CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1421 16F2 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1423 16F2 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1426 16F2 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1452 16F2 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1453 16F4 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1454 16F6 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1457 16F8 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1458 16FA cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1459 16FC cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1460 16FE cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1466 1700 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1467 1700 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1468 1700 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1469 1702 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1470 1704 cinit CODE
+"C:\Users\Mike\AppData\Local\Temp\s1gs.":1471 1706 cinit CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":13 170A text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":15 170E text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":17 1712 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":18 1714 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":19 1716 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":22 1718 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\USART\uwrite.c":23 171C text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":12 171E text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":15 171E text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":16 1722 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":17 1724 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":19 1728 text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":20 172C text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.30\sources\pic18\plib\SPI\spi_read.c":21 172E text24 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwdiv@dividend 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+main@out_count 19E 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@f 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_n 49 0 COMRAM 1 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+___lwdiv@counter 17 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_OpenUSART 12FA 0 CODE 0 text19 dist/default/production\Tomcat_Surface.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__S1 1A6 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\Tomcat_Surface.X.production.obj
+strcspn@i 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_isr 8 0 CODE 0 intcode dist/default/production\Tomcat_Surface.X.production.obj
+_PIE1 F9D 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_strcspn 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+OSD_disp@_on 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_main 6E4 0 CODE 0 text0 dist/default/production\Tomcat_Surface.X.production.obj
+_atoi 100A 0 CODE 0 text14 dist/default/production\Tomcat_Surface.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+start 14 0 CODE 0 init C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+OpenSPI@bus_mode 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_isdigit$2144 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+get_wrist@wrist 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+WriteUSART@data 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_RCREG FAE 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISA F92 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+strlen@cp 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_RCSTA FAB 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISB F93 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISC F94 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TXREG FAD 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISD F95 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_SPBRG FAF 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Tomcat_Surface.X.production.obj
+_TXSTA FAC 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISE F96 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Tomcat_Surface.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_T0CON FD5 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+main@buff 100 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\Tomcat_Surface.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\Tomcat_Surface.X.production.obj
+atoi@a 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+?___lwmod 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+atoi@s 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Tomcat_Surface.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Tomcat_Surface.X.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/default/production\Tomcat_Surface.X.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/default/production\Tomcat_Surface.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\Tomcat_Surface.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_WriteUSART 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\Tomcat_Surface.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\Tomcat_Surface.X.production.obj
+?_atoi 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+atoi@sign 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_OpenSPI 13B6 0 CODE 0 text21 dist/default/production\Tomcat_Surface.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Tomcat_Surface.X.production.obj
+_char_map 601 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Tomcat_Surface.X.production.obj
+strtok@sp 46 0 COMRAM 1 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of__stringdata 6E3 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_isr 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\Tomcat_Surface.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\Tomcat_Surface.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Tomcat_Surface.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Tomcat_Surface.X.production.obj
+?_sprintf 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_strtok 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+main@roll 15C 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+_ADCON0 FC2 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_ADCON2 FC0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_OSD_disp 1550 0 CODE 0 text22 dist/default/production\Tomcat_Surface.X.production.obj
+_PIE1bits F9D 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Tomcat_Surface.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Tomcat_Surface.X.production.obj
+_get_claw 165E 0 CODE 0 text13 dist/default/production\Tomcat_Surface.X.production.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_OSD_init F04 0 CODE 0 text20 dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@ap 38 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_LATCbits F8B 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Tomcat_Surface.X.production.obj
+_LATEbits F8D 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Tomcat_Surface.X.production.obj
+?_strcspn 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_recv_flag 1A5 0 BANK1 1 bssBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Tomcat_Surface.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Tomcat_Surface.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\Tomcat_Surface.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\Tomcat_Surface.X.production.obj
+__Hramtop 600 0 RAM 0 ramtop dist/default/production\Tomcat_Surface.X.production.obj
+__Lramtop 600 0 RAM 0 ramtop dist/default/production\Tomcat_Surface.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Tomcat_Surface.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Tomcat_Surface.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Tomcat_Surface.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Tomcat_Surface.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_strlen 15C6 0 CODE 0 text5 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_strcspn 1466 0 CODE 0 text3 dist/default/production\Tomcat_Surface.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Tomcat_Surface.X.production.obj
+_SPBRGH FB0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+?___lwdiv 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Tomcat_Surface.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Tomcat_Surface.X.production.obj
+__Hintcode 14 0 CODE 0 intcode dist/default/production\Tomcat_Surface.X.production.obj
+_SSPBUF FC9 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/production\Tomcat_Surface.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Tomcat_Surface.X.production.obj
+_ADRESH FC4 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Tomcat_Surface.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/default/production\Tomcat_Surface.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Tomcat_Surface.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Tomcat_Surface.X.production.obj
+_INTCON FF2 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+main@check 19C 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Tomcat_Surface.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Tomcat_Surface.X.production.obj
+_recv_buff 1A4 0 BANK1 1 bssBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_OSD_disp 158C 0 CODE 0 text22 dist/default/production\Tomcat_Surface.X.production.obj
+main@pitch 15A 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+main@osd_buff_870 160 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+Str_output@col 22 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_OSD_disp 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CCP2MX$PORTC 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@_col 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_dpowers 68B 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\Tomcat_Surface.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+stackhi 5FF 0 ABS 0 - C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+_OSD_write 121E 0 CODE 0 text17 dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@sp 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+strchr@chr 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+WriteSPI@data_out 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_strlen 158C 0 CODE 0 text5 dist/default/production\Tomcat_Surface.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Tomcat_Surface.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Tomcat_Surface.X.production.obj
+stacklo 1A6 0 ABS 0 - C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Tomcat_Surface.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Tomcat_Surface.X.production.obj
+_strchr 12FA 0 CODE 0 text4 dist/default/production\Tomcat_Surface.X.production.obj
+_strtok 10D8 0 CODE 0 text1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hinit 14 0 CODE 0 init dist/default/production\Tomcat_Surface.X.production.obj
+__Linit 14 0 CODE 0 init dist/default/production\Tomcat_Surface.X.production.obj
+__Hintcodelo 14 0 CODE 0 intcodelo dist/default/production\Tomcat_Surface.X.production.obj
+__Lintcodelo 14 0 CODE 0 intcodelo dist/default/production\Tomcat_Surface.X.production.obj
+___wmul 15C6 0 CODE 0 text18 dist/default/production\Tomcat_Surface.X.production.obj
+main@token 1A2 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_main D9E 0 CODE 0 text0 dist/default/production\Tomcat_Surface.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Tomcat_Surface.X.production.obj
+_strspn 13B6 0 CODE 0 text2 dist/default/production\Tomcat_Surface.X.production.obj
+main@depth 17E 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_OSC$HS 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+___wmul@multiplier 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_strchr 135A 0 CODE 0 text4 dist/default/production\Tomcat_Surface.X.production.obj
+end_of_initialization 1700 0 CODE 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+OpenUSART@spbrg 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+___wmul@multiplicand 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_SSPCON1 FC6 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+?_get_claw 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_PORTAbits F80 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_PORTCbits F82 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+ReadSPI@TempVar 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_get_claw 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_ReadSPI 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+strchr@ptr 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_strspn 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_get_wrist 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Tomcat_Surface.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Tomcat_Surface.X.production.obj
+Str_output@num 26 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_OSD_init 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_strlen 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_atoi 10D8 0 CODE 0 text14 dist/default/production\Tomcat_Surface.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Tomcat_Surface.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\Tomcat_Surface.X.production.obj
+main@ex_temp 180 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_get_claw 1688 0 CODE 0 text13 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\Tomcat_Surface.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Tomcat_Surface.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Tomcat_Surface.X.production.obj
+__Hpowerup 14 0 CODE 0 powerup dist/default/production\Tomcat_Surface.X.production.obj
+_ReadSPI 171E 0 CODE 0 text24 dist/default/production\Tomcat_Surface.X.production.obj
+_SSPSTAT FC7 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Lpowerup 14 0 CODE 0 powerup dist/default/production\Tomcat_Surface.X.production.obj
+_OpenSPI 135A 0 CODE 0 text21 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_get_wrist 165E 0 CODE 0 text12 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Tomcat_Surface.X.production.obj
+_SSPCON1bits FC6 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext0 6E4 0 CODE 0 text0 dist/default/production\Tomcat_Surface.X.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext1 10D8 0 CODE 0 text1 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext2 13B6 0 CODE 0 text2 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext3 140E 0 CODE 0 text3 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext4 12FA 0 CODE 0 text4 dist/default/production\Tomcat_Surface.X.production.obj
+_get_wrist 1634 0 CODE 0 text12 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext5 158C 0 CODE 0 text5 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext6 D9E 0 CODE 0 text6 dist/default/production\Tomcat_Surface.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+OpenUSART@config 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext7 150A 0 CODE 0 text7 dist/default/production\Tomcat_Surface.X.production.obj
+__pbssCOMRAM 46 0 COMRAM 1 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\Tomcat_Surface.X.production.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Tomcat_Surface.X.production.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext8 1466 0 CODE 0 text8 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext9 1600 0 CODE 0 text9 dist/default/production\Tomcat_Surface.X.production.obj
+__pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Tomcat_Surface.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@posl 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of__initialization 1700 0 CODE 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+__end_of___lwdiv 14BC 0 CODE 0 text8 dist/default/production\Tomcat_Surface.X.production.obj
+_WriteUSART 170A 0 CODE 0 text11 dist/default/production\Tomcat_Surface.X.production.obj
+strspn@i 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_SSPSTATbits FC7 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+Str_output@word 24 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+strlen@s 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_USART_Status 48 0 COMRAM 1 bssCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\Tomcat_Surface.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\Tomcat_Surface.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Tomcat_Surface.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Tomcat_Surface.X.production.obj
+putsUSART@data 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\Tomcat_Surface.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_STVREN$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_read_an 1600 0 CODE 0 text9 dist/default/production\Tomcat_Surface.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\Tomcat_Surface.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_putsUSART 16D8 0 CODE 0 text10 dist/default/production\Tomcat_Surface.X.production.obj
+int_func 1190 0 CODE 0 intcode_body dist/default/production\Tomcat_Surface.X.production.obj
+___lwmod 150A 0 CODE 0 text7 dist/default/production\Tomcat_Surface.X.production.obj
+__Hparam 0 0 ABS 0 rparam dist/default/production\Tomcat_Surface.X.production.obj
+__Lparam 0 0 ABS 0 rparam dist/default/production\Tomcat_Surface.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_isr 121E 0 CODE 0 intcode_body dist/default/production\Tomcat_Surface.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_strtok 1190 0 CODE 0 text1 dist/default/production\Tomcat_Surface.X.production.obj
+_sprintf D9E 0 CODE 0 text6 dist/default/production\Tomcat_Surface.X.production.obj
+?_strlen 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hsmallconst 6E4 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__Lsmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__psmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+?_strchr 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+Str_output@n 28 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+?_strtok 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Tomcat_Surface.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Tomcat_Surface.X.production.obj
+?___wmul 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_isdigit 1688 0 CODE 0 text15 dist/default/production\Tomcat_Surface.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+_strcspn 140E 0 CODE 0 text3 dist/default/production\Tomcat_Surface.X.production.obj
+__pcinit 16F2 0 CODE 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+?_strspn 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__ramtop 600 0 RAM 0 ramtop C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+___lwdiv 1466 0 CODE 0 text8 dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_dpowers 681 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__Hconst 0 0 CODE 0 const dist/default/production\Tomcat_Surface.X.production.obj
+OSD_disp@vm0 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Lconst 0 0 CODE 0 const dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_OpenUSART 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+strcspn@s1 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_read_an 1634 0 CODE 0 text9 dist/default/production\Tomcat_Surface.X.production.obj
+strcspn@s2 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@_font 17 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_strchr 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_isdigit 16B2 0 CODE 0 text15 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_sprintf F04 0 CODE 0 text6 dist/default/production\Tomcat_Surface.X.production.obj
+read_an@num 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_WriteUSART 171E 0 CODE 0 text11 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+OpenSPI@smp_phase 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@flag 3A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_Str_output 150A 0 CODE 0 text16 dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_putsUSART 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_strspn 140E 0 CODE 0 text2 dist/default/production\Tomcat_Surface.X.production.obj
+__pbssBANK1 1A4 0 BANK1 1 bssBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+main@temp1 198 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext10 16B2 0 CODE 0 text10 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext20 F04 0 CODE 0 text20 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext11 170A 0 CODE 0 text11 dist/default/production\Tomcat_Surface.X.production.obj
+main@temp2 19A 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext21 135A 0 CODE 0 text21 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext12 1634 0 CODE 0 text12 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext22 1550 0 CODE 0 text22 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext13 165E 0 CODE 0 text13 dist/default/production\Tomcat_Surface.X.production.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext23 16D8 0 CODE 0 text23 dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@prec 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext14 100A 0 CODE 0 text14 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext24 171E 0 CODE 0 text24 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_OSD_write 1290 0 CODE 0 text17 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext15 1688 0 CODE 0 text15 dist/default/production\Tomcat_Surface.X.production.obj
+get_claw@claw 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Tomcat_Surface.X.production.obj
+__ptext16 14BC 0 CODE 0 text16 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__ptext17 121E 0 CODE 0 text17 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of___lwmod 1550 0 CODE 0 text7 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Tomcat_Surface.X.production.obj
+___lwmod@divisor 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__ptext18 15C6 0 CODE 0 text18 dist/default/production\Tomcat_Surface.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\Tomcat_Surface.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_WriteSPI 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__ptext19 1290 0 CODE 0 text19 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+WriteSPI@TempVar 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+_OpenUSART 1290 0 CODE 0 text19 dist/default/production\Tomcat_Surface.X.production.obj
+__Hend_init 18 0 CODE 0 end_init dist/default/production\Tomcat_Surface.X.production.obj
+__Lend_init 14 0 CODE 0 end_init dist/default/production\Tomcat_Surface.X.production.obj
+_putsUSART 16B2 0 CODE 0 text10 dist/default/production\Tomcat_Surface.X.production.obj
+main@int_press 15E 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_Str_output 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+___lwdiv@divisor 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+Str_output@row 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@_row 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@posh 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+main@osd_buff 13C 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Tomcat_Surface.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+strtok@s1 20 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+strspn@s1 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+strtok@s2 22 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+strspn@s2 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__stringdata 68B 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_atoi 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__accesstop 80 0 ABS 0 - C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Tomcat_Surface.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Tomcat_Surface.X.production.obj
+OpenSPI@sync_mode 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__pintcode_body 1190 0 CODE 0 intcode_body dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+main@int_temp 182 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+intlevel1 0 0 CODE 0 text C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+intlevel2 0 0 CODE 0 text C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+intlevel3 0 0 CODE 0 text C:\Users\Mike\AppData\Local\Temp\s1gs.obj
+__size_of_OpenSPI 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_WriteSPI 16D8 0 CODE 0 text23 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_read_an 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of___wmul 1600 0 CODE 0 text18 dist/default/production\Tomcat_Surface.X.production.obj
+?_get_wrist 10 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+read_an@channel 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+start_initialization 16F2 0 CODE 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+OSD_write@pos 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+___lwdiv@quotient 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_WriteSPI 16F2 0 CODE 0 text23 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_ReadSPI 1730 0 CODE 0 text24 dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_char_map 681 0 SMALLCONST 0 smallconst dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__end_of_OSD_init 100A 0 CODE 0 text20 dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+__initialization 16F2 0 CODE 0 cinit dist/default/production\Tomcat_Surface.X.production.obj
+main@output 184 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+_Str_output 14BC 0 CODE 0 text16 dist/default/production\Tomcat_Surface.X.production.obj
+___lwmod@dividend 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@_val 3C 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+___wmul@product 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__size_of_OSD_write 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+___lwmod@counter 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+main@heading 1A0 0 BANK1 1 cstackBANK1 dist/default/production\Tomcat_Surface.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Tomcat_Surface.X.production.obj
+sprintf@c 41 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+isdigit@c 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Tomcat_Surface.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+intcode 0 8 8 10 1
+smallconst 0 600 600 E4 1
+config 0 300000 300000 E 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 49 1
+cstackBANK1 1 100 100 A6 1
+text0 0 6E4 6E4 104C 1

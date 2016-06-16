@@ -1,0 +1,67 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"2 Tomcat_S_config.c
+[p x OSC=HS ]
+"3
+[p x FCMEN=OFF ]
+"4
+[p x IESO=OFF ]
+"7
+[p x PWRT=OFF ]
+"8
+[p x BOREN=OFF ]
+"9
+[p x BORV=3 ]
+"12
+[p x WDT=OFF ]
+"13
+[p x WDTPS=32768 ]
+"16
+[p x CCP2MX=PORTC ]
+"17
+[p x PBADEN=ON ]
+"18
+[p x LPT1OSC=OFF ]
+"19
+[p x MCLRE=ON ]
+"22
+[p x STVREN=OFF ]
+"23
+[p x LVP=OFF ]
+"24
+[p x XINST=OFF ]
+"27
+[p x CP0=OFF ]
+"28
+[p x CP1=OFF ]
+"29
+[p x CP2=OFF ]
+"30
+[p x CP3=OFF ]
+"33
+[p x CPB=OFF ]
+"34
+[p x CPD=OFF ]
+"37
+[p x WRT0=OFF ]
+"38
+[p x WRT1=OFF ]
+"39
+[p x WRT2=OFF ]
+"40
+[p x WRT3=OFF ]
+"43
+[p x WRTC=OFF ]
+"44
+[p x WRTB=OFF ]
+"45
+[p x WRTD=OFF ]
+"48
+[p x EBTR0=OFF ]
+"49
+[p x EBTR1=OFF ]
+"50
+[p x EBTR2=OFF ]
+"51
+[p x EBTR3=OFF ]
+"54
+[p x EBTRB=OFF ]
