@@ -1,5 +1,5 @@
 /* 
- * File:   Tomcat_driver.h
+ * File:   Tomcat_V_driver.h
  * Author: Mathew
  *
  * Created on April 10, 2014, 6:33 PM
@@ -102,32 +102,32 @@ long int freg_acc_y = -315;
 long int freg_acc_z = 5375;
 
 //pin defs
-#define THRUSTER1_DIR   LATBbits.LATB3
-#define THRUSTER2_DIR   LATBbits.LATB4
-#define THRUSTER3_DIR   LATBbits.LATB6
-#define THRUSTER4_DIR   LATDbits.LATD0
-#define GRIPPER_DIR     LATEbits.LATE1
-#define GRIPPER_EN      LATEbits.LATE2
-#define WRIST_DIR       LATBbits.LATB7
-#define WRIST_EN        LATCbits.LATC0
+#define THRUSTER1_DIR   LATBbits.LATB3  //pin 36 (PORT)
+#define THRUSTER2_DIR   LATBbits.LATB4  //pin 37 (STBD)
+#define THRUSTER3_DIR   LATBbits.LATB6  //pin 39 (VERT)
+#define THRUSTER4_DIR   LATDbits.LATD0  //pin 19 (LAT)
+#define GRIPPER_DIR     LATEbits.LATE1  //pin 9
+#define GRIPPER_EN      LATEbits.LATE2  //pin 10
+#define WRIST_DIR       LATBbits.LATB7  //pin 40
+#define WRIST_EN        LATCbits.LATC0  //pin 15
 
-#define LEAK_1          PORTBbits.RB1
+#define LEAK_1          PORTBbits.RB1   //pin 34
 
-#define LIGHTS          LATDbits.LATD3
-#define LED_COMS        LATAbits.LATA4
+#define LIGHTS          LATDbits.LATD3  //pin 22
+#define LED_COMS        LATAbits.LATA4  //pin 6
 //#define EX_TEMP_PIN     PORTABITS.RA4
 
 
 //analog channels
 
-#define PRESSURE_EXT    3
-#define PRESSURE_INT    2
-#define TEMP_INT        8
-#define TEMP_EXT        12
-#define CAM_PAN         5
-#define CAM_TILT        6
-#define V_CURRENT       0
-#define MAIN_CURRENT    1
+#define PRESSURE_EXT    3   //pin 5
+#define PRESSURE_INT    2   //pin 4
+#define TEMP_INT        8   //pin 35
+#define TEMP_EXT        22  //pin 21
+#define CAM_PAN         4   //pin 7
+#define CAM_TILT        5   //pin 23
+#define V_CURRENT       0   //pin 2
+#define MAIN_CURRENT    1   //pin 3
 
 
 //functions

@@ -32,12 +32,12 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC18F46K22</targetDevice>
+        <targetDevice>PIC18F45K22</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.21</languageToolchainVersion>
+        <languageToolchainVersion>1.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -138,7 +138,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0xffff"/>
         <property key="memories.programmemory.start" value="0x0"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
         <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmspeed" value="2"/>
@@ -153,7 +153,12 @@
         <property key="voltagevalue" value="5.0"/>
       </PICkit3PlatformTool>
       <XC8-config-global>
+        <property key="advanced-elf" value="true"/>
         <property key="output-file-format" value="-mcof,+elf"/>
+        <property key="stack-size-high" value="auto"/>
+        <property key="stack-size-low" value="auto"/>
+        <property key="stack-size-main" value="auto"/>
+        <property key="stack-type" value="compiled"/>
       </XC8-config-global>
     </conf>
   </confs>
