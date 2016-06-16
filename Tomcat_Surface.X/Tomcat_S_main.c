@@ -92,6 +92,7 @@ void main(void) {
         }
         sprintf(buff, "$%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n", output[1], output[2], output[3], output[4], output[5],
                 output[6], output[7], output[8], output[9], check);
+        while(BusyUSART());
         putsUSART(buff);
 
         //RECIEVE FROM VEHICLE
