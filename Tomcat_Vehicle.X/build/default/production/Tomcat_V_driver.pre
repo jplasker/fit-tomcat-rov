@@ -1,5 +1,5 @@
 
-# 1 "Tom_V_Main.c"
+# 1 "Tomcat_V_driver.c"
 
 
 # 21 "C:\Program Files (x86)\Microchip\xc8\v1.30\include\htc.h"
@@ -9755,176 +9755,305 @@ void Tomcat_TX_error(char code);
 void Tomcat_Camera(int pan,int tilt);
 unsigned int analogRead(char channel);
 
-# 3 "Tom_V_Main.c"
-void interrupt isr(void) {
-INTCONbits.GIE = 0;
-if (INTCONbits.TMR0IF) {
-INTCONbits.TMR0IF = 0;
-TMR0=0;
-tmr0_flag = 1;
-time++;
-asm(" clrwdt");
-}
-if (PIR1bits.TMR1IF) {
-PIR1bits.TMR1IF = 0;
-TMR1=0;
-comms_time++;
-tmr1_flag = 1;
-asm(" clrwdt");
-}
-
-# 24
-if (PIR1bits.RC1IF) {
-PIR1bits.RC1IF = 0;
-rx1_buff[rx1_count] = RCREG;
-if (rx1_buff[rx1_count] == 0x0a)rx1_flag = 1;
-if (rx1_buff[rx1_count++] == '$')rx1_count = 0;
-
-# 38
-}
-if (PIR3bits.RC2IF) {
-PIR3bits.RC2IF = 0;
-rx2_flag = 1;
-}
-if (INTCONbits.INT0IF) {
-INTCONbits.INT0IF = 0;
-leak1_flag = 1;
-Tomcat_TX_error('L');
-}
-INTCONbits.GIE = 1;
-}
-
-void main(void) {
-
-int heading, pitch, roll;
-int depth, int_press, ex_temp, int_temp;
-int main_current = 0, v_current = 0;
-char comms_timed_out = 0;
-char surf_buff[60];
-int input[15] = {0};
-char *token;
-const char delimit[2] = ",";
-char in_count = 0;
-unsigned int check = 0;
+# 7 "Tomcat_V_driver.c"
+void Tomcat_Setup() {
 
 
-__nop();
-__nop();
-asm(" clrwdt");
-RCON = 0b01111111;
-Tomcat_Setup();
-Thruster_Driver(0, 1);
-Thruster_Driver(0, 2);
-Thruster_Driver(0, 3);
-Thruster_Driver(0, 4);
-
-while (1) {
-asm(" clrwdt");
-sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d",
-depth, heading, pitch, roll, ex_temp, int_temp, int_press, main_current, v_current);
-
-if (time > 10) {
-
-time = 1;
-
-depth = Tomcat_Depth();
-
-int_press = Tomcat_Press_Int();
-if (int_press > 20)
-Tomcat_TX_warn('P');
-if (int_press > 20)
-Tomcat_TX_error('P');
-
-int_temp = Tomcat_Temp();
-if (int_temp > 65)
-Tomcat_TX_warn('T');
-if (int_temp > 75)
-Tomcat_TX_error('T');
-
-ex_temp = Tomcat_Temp_Ex();
-
-}
-if (((time % 5) == 0) && tmr0_flag) {
-
-
-Tomcat_TX_data(surf_buff, strlen(surf_buff) - 1);
-}
-asm(" clrwdt");
-if (((time % 2) == 0) && tmr0_flag) {
-
-
-main_current = analogRead(1) * 5;
-v_current = analogRead(0) * 1;
-
-if (v_current > 2003)
-Tomcat_TX_warn('C');
-if (v_current > 2000)
-Tomcat_TX_error('C');
-}
-if (tmr0_flag) {
-
-tmr0_flag = 0;
+ADCON0 = 0b00000001;
+ADCON1 = 0b00000000;
+ADCON2 = 0b10100011;
 
 
 
+INTCON = 0b11110000;
+PIE1 = 0b00100001;
 
-}
+TRISA = 0b11101111;
+ANSELA = 0b00101111;
+PORTA = 0b00000000;
 
 asm(" clrwdt");
-if (comms_time > 20 || comms_timed_out) {
-comms_timed_out = 1;
-LATAbits.LATA4 = 0;
-Tomcat_TX_error('N');
+TRISB = 0b00000110;
+ANSELB = 0b00000100;
+PORTB = 0b00000000;
+
+TRISC = 0b10010000;
+ANSELC = 0b00000000;
+PORTC = 0b00000000;
+
+TRISD = 0b10110100;
+ANSELD = 0b00000000;
+PORTD = 0b00000000;
+
+TRISE = 0b11111000;
+ANSELE = 0b00000000;
+PORTE = 0b00000000;
+
+
+T0CON = 0b10000010;
+T1CON = 0b00010011;
+
+T2CON = 0b00000110;
+T4CON = 0b00000110;
+
+
+CCP1CON = 0b00001100;
+CCP2CON = 0b00001100;
+CCP3CON = 0b00001100;
+CCP4CON = 0b00001111;
+
+ECCP1AS = 0;
+ECCP2AS = 0;
+ECCP3AS = 0;
+
+
+PSTR1CON = 0b00000001;
+PSTR2CON = 0b00000001;
+PSTR3CON = 0b00000001;
+asm(" clrwdt");
+
+CCPTMRS0 = 0b00000001;
+CCPTMRS1 = 0b00001001;
+
+SSP1CON1 &=0xDF;
+OpenI2C1(0b00001000, 0b10000000);
+SSP1ADD = 49;
+Open1USART(0b01111111 &
+0b11111111 &
+0b11111110 &
+0b11111101 &
+0b11111111 &
+0b11111111, (unsigned char)(((float)20000000/(16.0*(float)9600))+1));
+asm(" clrwdt");
+
+# 89
 }
-if (rx1_flag == 1) {
 
-
-
-
-LATAbits.LATA4 = 1;
-rx1_count = 0;
-rx1_flag = 0;
-
-
-token = strtok(rx1_buff, delimit);
-input[0] = atoi(token);
-check = input[0];
-for (in_count = 1; in_count < 9; in_count++) {
-token = strtok((0), delimit);
-input[in_count] = atoi(token);
-check = check + input[in_count];
+void Thruster_Driver(int input, char thruster) {
+char dir = 0;
+int dc = 0;
+if (input > 134)
+{
+dir = 1;
+dc = 256 * ((input - 127) / 126.0);
+}
+else if (input < 120)
+{
+dir = 0;
+dc = 256 * ((126 - input) / 126.0);
+}
+else
+{
+dc=0;
 }
 
-if (check == (unsigned int) atoi(strtok((0), delimit))) {
-comms_time = 0;
-comms_timed_out = 0;
-LATAbits.LATA4 = 1;
+switch (thruster) {
+case 1:
+LATBbits.LATB3 = dir;
+SetDCEPWM1(dc);
 
-Thruster_Driver(input[0], 1);
-Thruster_Driver(input[1], 2);
-Thruster_Driver(input[2], 3);
-Thruster_Driver(input[3], 4);
-Tomcat_Claw(input[4], input[5]);
-Tomcat_Camera(input[6], input[7]);
+break;
+case 2:
+LATBbits.LATB4 = dir;
+SetDCEPWM2(dc);
+break;
+case 3:
+LATBbits.LATB6 = dir;
+SetDCEPWM3(dc);
+break;
+case 4:
+LATDbits.LATD0 = dir;
+SetDCPWM4(dc);
+break;
+}
+}
 
-if (input[8]) {
-LATDbits.LATD3 = 0;
+int Tomcat_Heading() {
+float hdg = 0.0;
+float temp = 0;
+readLSM9_mag(mag);
+
+
+freg_mag_x = freg_mag_x - (freg_mag_x >> 2) + mag[0];
+freg_mag_y = freg_mag_y - (freg_mag_y >> 2) + mag[1];
+freg_mag_z = freg_mag_z - (freg_mag_z >> 2) + mag[2];
+
+mag[0] = freg_mag_x >> 2;
+mag[1] = freg_mag_y >> 2;
+mag[2] = freg_mag_z >> 2;
+
+
+
+if (mag[0] > 0 && mag[1] > 0) {
+temp = (float) mag[0] / (float) mag[1];
+
+hdg = 90 - 180.0 * atan(temp) / 3.14159265358979323846;
+
+} else if (mag[0] < 0 && mag[1] > 0) {
+temp = (float) mag[1] / (float) mag[0];
+
+hdg = 180 + 180.0 * atan(temp) / 3.14159265358979323846;
+
+
 } else {
-LATDbits.LATD3 = 0;
+temp = (float) mag[0] / (float) mag[1];
+
+hdg = 270 - 180.0 * atan(temp) / 3.14159265358979323846;
 }
+return hdg;
 }
 
-}
-if (rx2_flag) {
+int Tomcat_Pitch() {
+float pitch = 0.0;
+float temp = 0;
+readLSM9_accel(accel);
 
-rx2_flag = 0;
+
+freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
+freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
+freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+
+accel[0] = freg_acc_x >> 2;
+accel[1] = freg_acc_y >> 2;
+accel[2] = freg_acc_z >> 2;
+
+
+temp = (float) accel[0] / (float) accel[2];
+pitch = 3 + 180.0 * atan(temp) / 3.14159265358979323846;
+
+return pitch;
+}
+
+int Tomcat_Roll() {
+float roll = 0.0;
+float temp = 0;
+readLSM9_accel(accel);
+
+
+freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
+freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
+freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+
+accel[0] = freg_acc_x >> 2;
+accel[1] = freg_acc_y >> 2;
+accel[2] = freg_acc_z >> 2;
+
+
+temp = (float) accel[1] / (float) accel[2];
+roll = 13 + 180.0 * atan(temp) / 3.14159265358979323846;
+
+return roll;
+}
+
+int Tomcat_Depth() {
+float tempPress;
+int depth;
+tempPress = analogRead(3);
+tempPress = tempPress - (1024.0 / 5.0);
+tempPress = tempPress * 500.0 / 820.0;
+depth = (int) (tempPress * 2.31);
+return depth;
 
 }
-asm(" clrwdt");
-if (leak1_flag || PORTBbits.RB1) {
-leak1_flag = 0;
-Tomcat_TX_error('L');
-}
-}
+
+int Tomcat_Press_Int() {
+int press = 0;
+press = (analogRead(2) - 41) / 922 * 101.5;
+return press;
 }
 
+int Tomcat_Temp() {
+float temp = 0.0;
+temp = analogRead(8);
+temp = (temp / 1024.0) * 500.0;
+return (int)temp;
+}
+
+int Tomcat_Temp_Ex() {
+
+
+float temp = 0.0;
+temp = analogRead(22);
+temp = (temp / 1024.0) * 5.0;
+temp = (10000 * 5.0 / temp) - 10000;
+temp = 229.23 - 22.009493 * log(temp);
+return temp;
+}
+
+void Tomcat_Claw(int grip, int wrist) {
+
+if (grip > 127)
+LATEbits.LATE1 = 1;
+else
+LATEbits.LATE1 = 0;
+
+if (grip == 127)
+LATEbits.LATE2 = 0;
+else
+LATEbits.LATE2 = 1;
+
+if (wrist > 127)
+LATBbits.LATB7 = 1;
+else
+LATBbits.LATB7 = 0;
+
+if (wrist == 127)
+LATCbits.LATC0 = 0;
+else
+LATCbits.LATC0 = 1;
+
+
+}
+
+void Tomcat_TX_data(char tx_buff[], char num_bytes) {
+char k = 0;
+while ((!TXSTA1bits.TRMT));
+Write1USART('$');
+
+for (k = 0; k < num_bytes; k++) {
+while ((!TXSTA1bits.TRMT));
+Write1USART(tx_buff[k]);
+}
+Write1USART('\n');
+}
+
+void Tomcat_TX_warn(char code) {
+
+while ((!TXSTA1bits.TRMT));
+Write1USART('$');
+while ((!TXSTA1bits.TRMT));
+Write1USART('?');
+while ((!TXSTA1bits.TRMT));
+Write1USART(code);
+}
+
+void Tomcat_TX_error(char code) {
+
+while ((!TXSTA1bits.TRMT));
+Write1USART('$');
+while ((!TXSTA1bits.TRMT));
+Write1USART('!');
+while ((!TXSTA1bits.TRMT));
+Write1USART(code);
+while ((!TXSTA1bits.TRMT));
+Write1USART('\n');
+
+}
+
+void Tomcat_Camera(int pan, int tilt) {
+int pan_pos = analogRead(4);
+int tilt_pos = analogRead(5);
+
+
+
+}
+
+
+unsigned int analogRead(char channel) {
+unsigned int num = 0;
+ADCON0bits.CHS = channel;
+ADCON0bits.GO = 1;
+while (ADCON0bits.GO == 1);
+num = ADRES;
+return (num);
+}
