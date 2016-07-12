@@ -178,7 +178,7 @@ void main(void) {
                 Tomcat_Camera(input[6], input[7]);
 
                 if (input[8]) {
-                    LIGHTS = 1; //lights draw too much
+                    LIGHTS = 1; //may need to disable if lights draw too much
                 } else {
                     LIGHTS = 0;
                 }
