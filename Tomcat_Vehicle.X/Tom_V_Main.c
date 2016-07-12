@@ -7,14 +7,15 @@ void interrupt isr(void) {
         TMR0_RESET();
         tmr0_flag = 1;
         time++;
-        CLRWDT();
+        //CLRWDT();
     }
     if (TMR1_INT) {
         TMR1_INT = 0;
         TMR1_RESET();
         comms_time++;
+        if (comms_time > COMMS_TIMEOUT) LED_COMS = 0;
         tmr1_flag = 1;
-        CLRWDT();
+        //CLRWDT();
     }
     //if (TMR2_INT) {
     //TMR2_INT = 0;
@@ -24,8 +25,18 @@ void interrupt isr(void) {
     if (RX1_INT) {
         RX1_INT = 0;
         rx1_buff[rx1_count] = RCREG;
-        if (rx1_buff[rx1_count] == 0x0a)rx1_flag = 1;
-        if (rx1_buff[rx1_count++] == '$')rx1_count = 0;
+        if (rx1_count > 43) rx1_count = 0;
+        if (rx1_buff[rx1_count] == 0x0a && rx1_buff[0] == '$'){
+            for (rx1_count = rx1_count + 1; rx1_count < 45; rx1_count++) rx1_buff[rx1_count] = NULL;
+            if(rx1_flag == 0) strcpy(rx_temp_buff, rx1_buff);
+            rx1_flag = 1;
+            rx1_count = 0;
+        }
+        if (rx1_buff[rx1_count++] == '$'){
+            rx1_buff[0] = '$';
+            rx1_count = 1;
+        }
+
         //cahnged to looking for "$" ended by newline
 
         //        if (rx1_count == SUR_PACK_LEN)rx1_flag = 1;
@@ -60,6 +71,7 @@ void main(void) {
     const char delimit[2] = ",";
     char in_count = 0;
     unsigned int check = 0;
+    unsigned int check_recv = 0;
 
 
     Nop();
@@ -74,8 +86,10 @@ void main(void) {
     //LED_COMS=1;
     while (1) {
         CLRWDT();
-        sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d",
-                depth, heading, pitch, roll, ex_temp, int_temp, int_press, main_current, v_current);
+        //sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d",
+                //depth, heading, pitch, roll, ex_temp, int_temp, int_press, main_current, v_current);
+        sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d ",
+                input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8], check, check_recv, int_press);
         //regularly scheduled stuff
         if (time > 10) {
             //every 10 time ticks
@@ -129,18 +143,19 @@ void main(void) {
             comms_timed_out = 1;
             LED_COMS = 0; //change to 0
             Tomcat_TX_error(COMMS);
+
         }
         if (rx1_flag == 1) {
             //rx from surface
             //packet all are ints
             //$port,stbd,vert,lat,grip,wrist,pan,tilt,lights,check sum\n\r
 
-            LED_COMS = 1;
-            rx1_count = 0;
-            rx1_flag = 0;
+            //LED_COMS = 1;
 
-
-            token = strtok(rx1_buff, delimit);
+            while(Busy1USART());
+            puts1USART(rx_temp_buff);
+            
+            token = strtok(&rx_temp_buff[1], delimit);
             input[0] = atoi(token);
             check = input[0];
             for (in_count = 1; in_count < SUR_PACK_LEN; in_count++) {
@@ -148,8 +163,9 @@ void main(void) {
                 input[in_count] = atoi(token);
                 check = check + input[in_count];
             }
+            check_recv = atoi(strtok(NULL, delimit));
             //check checksum
-            if (check == (unsigned int) atoi(strtok(NULL, delimit))) {
+            if (check == check_recv) {
                 comms_time = 0;
                 comms_timed_out = 0;
                 LED_COMS = 1;
@@ -162,12 +178,13 @@ void main(void) {
                 Tomcat_Camera(input[6], input[7]);
 
                 if (input[8]) {
-                    LIGHTS = 0; //lights draw too much
+                    LIGHTS = 1; //lights draw too much
                 } else {
                     LIGHTS = 0;
                 }
             }
-
+            rx1_count = 0;
+            rx1_flag = 0;
         }
         if (rx2_flag) {
             //rx from pan tilt

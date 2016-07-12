@@ -217,7 +217,11 @@ int Tomcat_Depth() {
 
 int Tomcat_Press_Int() {
     int press = 0;
-    press = (analogRead(PRESSURE_INT) - 41) / 922 * 101.5;
+    float temp = 0.0;
+    temp = analogRead(PRESSURE_INT)*0.0048 * 0.2;
+    temp = temp - 0.04;
+    temp =  temp * 777.7;
+    press = (int)temp;
     return press;
 }
 
@@ -273,6 +277,7 @@ void Tomcat_TX_data(char tx_buff[], char num_bytes) {
         while (Busy1USART());
         Write1USART(tx_buff[k]);
     }
+    while (Busy1USART());
     Write1USART('\n');
 }
 

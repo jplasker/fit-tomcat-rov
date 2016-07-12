@@ -30,8 +30,8 @@
 #define V_FACTOR        1       //current conversion factor
 #define WARN_INT_TEMP   65      //internal temp warning
 #define ALARM_INT_TEMP  75      //internal temp alarm
-#define WARN_INT_PRESS  20      //internal press warn
-#define ALARM_INT_PRESS 20      //internal press alarm
+#define WARN_INT_PRESS  850      //internal press warn
+#define ALARM_INT_PRESS 850      //internal press alarm
 #define WARN_V_CURRENT  2003      //24v current warn
 #define ALARM_V_CURRENT 2000      //24v current alarm
 #define COMMS_TIMEOUT   20    //comms timeout in timer1 cycles 200=5 sec
@@ -88,7 +88,8 @@ char time=1;
 int accel[3];
 int gyro[3];
 int mag[3];
-unsigned char rx1_buff[40];
+unsigned char rx1_buff[45];
+unsigned char rx_temp_buff[45];
 char rx1_count=0;
 unsigned int comms_time=0; //time for comms timeout
 
