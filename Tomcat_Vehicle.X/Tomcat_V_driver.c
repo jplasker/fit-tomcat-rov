@@ -15,6 +15,7 @@ void Tomcat_Setup() {
     
     INTCON = 0b11110000; //GIE PIEE TMR0 INT0
     PIE1   = 0b00100001; //rx1 tmr1
+    PIE2bits.OSCFIE = 1; //enable Oscillator fail interrupt
     //port setup
     TRISA  = 0b11101111;
     ANSELA = 0b00101111;

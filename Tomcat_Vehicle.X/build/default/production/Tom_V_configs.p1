@@ -8194,7 +8194,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "23
 [p x WDTEN=ON ]
 "24
-[p x WDTPS=32768 ]
+[p x WDTPS=16 ]
 "27
 [p x CCP2MX=PORTC1 ]
 "28

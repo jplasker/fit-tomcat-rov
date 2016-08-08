@@ -13,6 +13,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1109 . . . . . . ]
 "17645 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
 [v _INTCONbits `VS1109 ~T0 @X0 0 e@4082 ]
+"19222
+[v _OSCFIF `Vb ~T0 @X0 0 e@32015 ]
+[s S416 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S416 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+[s S417 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S417 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+[s S418 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S418 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+[s S419 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S419 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+[s S420 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S420 . SRI C12IN3N . C12IN2N . CCP3 ]
+[s S421 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S421 . . CTED1 CTED2 . T3CKI ]
+[s S422 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S422 . . P2A . P3A ]
+[s S423 :3 `uc 1 :1 `uc 1 ]
+[n S423 . . CCP2_PA2 ]
+[u S415 `S416 1 `S417 1 `S418 1 `S419 1 `S420 1 `S421 1 `S422 1 `S423 1 ]
+[n S415 . . . . . . . . . ]
+"6721
+[v _PORTBbits `VS415 ~T0 @X0 0 e@3969 ]
 "16895
 [v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
 [s S565 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -25,48 +47,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR1bits `VS564 ~T0 @X0 0 e@3998 ]
 "16485
 [v _TMR1 `Vus ~T0 @X0 0 e@4046 ]
-"11607
-[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
-[s S592 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S592 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
-[s S593 :1 `uc 1 :1 `uc 1 ]
-[n S593 . . RXBNIF ]
-[s S594 :4 `uc 1 :1 `uc 1 ]
-[n S594 . . TXBNIF ]
-[u S591 `S592 1 `S593 1 `S594 1 ]
-[n S591 . . . . ]
-"10379
-[v _PIR3bits `VS591 ~T0 @X0 0 e@4004 ]
-"147 Tomcat_V_driver.h
-[v _Tomcat_TX_error `(v ~T0 @X0 0 ef1`uc ]
-[p mainexit ]
-"42 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-"16529 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
-[v _RCON `Vuc ~T0 @X0 0 e@4048 ]
-"136 Tomcat_V_driver.h
-[v _Tomcat_Setup `(v ~T0 @X0 0 ef ]
-"135
-[v _Thruster_Driver `(v ~T0 @X0 0 ef2`i`uc ]
-"205 C:\Program Files (x86)\Microchip\xc8\v1.30\include\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"140 Tomcat_V_driver.h
-[v _Tomcat_Depth `(i ~T0 @X0 0 ef ]
-"141
-[v _Tomcat_Press_Int `(i ~T0 @X0 0 ef ]
-"146
-[v _Tomcat_TX_warn `(v ~T0 @X0 0 ef1`uc ]
-"142
-[v _Tomcat_Temp `(i ~T0 @X0 0 ef ]
-"143
-[v _Tomcat_Temp_Ex `(i ~T0 @X0 0 ef ]
-"145
-[v _Tomcat_TX_data `(v ~T0 @X0 0 ef2`*uc`uc ]
-"55 C:\Program Files (x86)\Microchip\xc8\v1.30\include\string.h
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-"149 Tomcat_V_driver.h
-[v _analogRead `(ui ~T0 @X0 0 ef1`uc ]
 [s S469 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S469 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
 [s S470 :1 `uc 1 ]
@@ -87,15 +67,73 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S477 . . LA7 ]
 [u S468 `S469 1 `S470 1 `S471 1 `S472 1 `S473 1 `S474 1 `S475 1 `S476 1 `S477 1 ]
 [n S468 . . . . . . . . . . ]
-"7819 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
+"7819
 [v _LATAbits `VS468 ~T0 @X0 0 e@3977 ]
+"11607
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"36 C:\Program Files (x86)\Microchip\xc8\v1.30\include\string.h
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+[s S592 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S592 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
+[s S593 :1 `uc 1 :1 `uc 1 ]
+[n S593 . . RXBNIF ]
+[s S594 :4 `uc 1 :1 `uc 1 ]
+[n S594 . . TXBNIF ]
+[u S591 `S592 1 `S593 1 `S594 1 ]
+[n S591 . . . . ]
+"10379 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
+[v _PIR3bits `VS591 ~T0 @X0 0 e@4004 ]
+"148 Tomcat_V_driver.h
+[v _Tomcat_TX_error `(v ~T0 @X0 0 ef1`uc ]
+[p mainexit ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"16529 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
+[v _RCON `Vuc ~T0 @X0 0 e@4048 ]
+"137 Tomcat_V_driver.h
+[v _Tomcat_Setup `(v ~T0 @X0 0 ef ]
+"136
+[v _Thruster_Driver `(v ~T0 @X0 0 ef2`i`uc ]
+"205 C:\Program Files (x86)\Microchip\xc8\v1.30\include\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"141 Tomcat_V_driver.h
+[v _Tomcat_Depth `(i ~T0 @X0 0 ef ]
+"142
+[v _Tomcat_Press_Int `(i ~T0 @X0 0 ef ]
+"147
+[v _Tomcat_TX_warn `(v ~T0 @X0 0 ef1`uc ]
+"143
+[v _Tomcat_Temp `(i ~T0 @X0 0 ef ]
+"144
+[v _Tomcat_Temp_Ex `(i ~T0 @X0 0 ef ]
+"146
+[v _Tomcat_TX_data `(v ~T0 @X0 0 ef2`*uc`uc ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.30\include\string.h
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"150 Tomcat_V_driver.h
+[v _analogRead `(ui ~T0 @X0 0 ef1`uc ]
+[s S634 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S634 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+[s S635 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S635 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+[s S636 :6 `uc 1 :1 `uc 1 ]
+[n S636 . . TX8_9 ]
+[s S637 :1 `uc 1 ]
+[n S637 . TXD8 ]
+[u S633 `S634 1 `S635 1 `S636 1 `S637 1 ]
+[n S633 . . . . . ]
+"11188 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
+[v _TXSTA1bits `VS633 ~T0 @X0 0 e@4012 ]
+"247 C:\Program Files (x86)\Microchip\xc8\v1.30\include\plib/usart.h
+[v _puts1USART `(v ~T0 @X0 0 ef1`*uc ]
 "40 C:\Program Files (x86)\Microchip\xc8\v1.30\include\string.h
 [v _strtok `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
 "67 C:\Program Files (x86)\Microchip\xc8\v1.30\include\stdlib.h
 [v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
-"144 Tomcat_V_driver.h
+"145 Tomcat_V_driver.h
 [v _Tomcat_Claw `(v ~T0 @X0 0 ef2`i`i ]
-"148
+"149
 [v _Tomcat_Camera `(v ~T0 @X0 0 ef2`i`i ]
 [s S499 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S499 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
@@ -119,26 +157,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S498 . . . . . . . . . . ]
 "8215 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
 [v _LATDbits `VS498 ~T0 @X0 0 e@3980 ]
-[s S416 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S416 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-[s S417 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S417 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
-[s S418 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S418 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
-[s S419 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S419 . FLT0 C12IN3M . C12IN2M T5G T1G ]
-[s S420 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S420 . SRI C12IN3N . C12IN2N . CCP3 ]
-[s S421 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S421 . . CTED1 CTED2 . T3CKI ]
-[s S422 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S422 . . P2A . P3A ]
-[s S423 :3 `uc 1 :1 `uc 1 ]
-[n S423 . . CCP2_PA2 ]
-[u S415 `S416 1 `S417 1 `S418 1 `S419 1 `S420 1 `S421 1 `S422 1 `S423 1 ]
-[n S415 . . . . . . . . . ]
-"6721
-[v _PORTBbits `VS415 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 22: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k22.h: 44: extern volatile unsigned char ANSELA @ 0xF38;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic18f45k22.h
@@ -7903,74 +7921,77 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _mag `i ~T0 @X0 -> 3 `i e ]
 [; ;Tomcat_V_driver.h: 90: int mag[3];
 "91
-[v _rx1_buff `uc ~T0 @X0 -> 40 `i e ]
-[; ;Tomcat_V_driver.h: 91: unsigned char rx1_buff[40];
+[v _rx1_buff `uc ~T0 @X0 -> 45 `i e ]
+[; ;Tomcat_V_driver.h: 91: unsigned char rx1_buff[45];
 "92
+[v _rx_temp_buff `uc ~T0 @X0 -> 45 `i e ]
+[; ;Tomcat_V_driver.h: 92: unsigned char rx_temp_buff[45];
+"93
 [v _rx1_count `uc ~T0 @X0 1 e ]
 [i _rx1_count
 -> -> 0 `i `uc
 ]
-[; ;Tomcat_V_driver.h: 92: char rx1_count=0;
-"93
+[; ;Tomcat_V_driver.h: 93: char rx1_count=0;
+"94
 [v _comms_time `ui ~T0 @X0 1 e ]
 [i _comms_time
 -> -> 0 `i `ui
 ]
-[; ;Tomcat_V_driver.h: 93: unsigned int comms_time=0;
-"97
+[; ;Tomcat_V_driver.h: 94: unsigned int comms_time=0;
+"98
 [v _freg_mag_x `l ~T0 @X0 1 e ]
 [i _freg_mag_x
 -> -U -> 135 `i `l
 ]
-[; ;Tomcat_V_driver.h: 97: long int freg_mag_x = -135;
-"98
+[; ;Tomcat_V_driver.h: 98: long int freg_mag_x = -135;
+"99
 [v _freg_mag_y `l ~T0 @X0 1 e ]
 [i _freg_mag_y
 -> -> 1055 `i `l
 ]
-[; ;Tomcat_V_driver.h: 98: long int freg_mag_y = 1055;
-"99
+[; ;Tomcat_V_driver.h: 99: long int freg_mag_y = 1055;
+"100
 [v _freg_mag_z `l ~T0 @X0 1 e ]
 [i _freg_mag_z
 -> -> 10725 `i `l
 ]
-[; ;Tomcat_V_driver.h: 99: long int freg_mag_z = 10725;
-"100
+[; ;Tomcat_V_driver.h: 100: long int freg_mag_z = 10725;
+"101
 [v _freg_acc_x `l ~T0 @X0 1 e ]
 [i _freg_acc_x
 -> -U -> 1295 `i `l
 ]
-[; ;Tomcat_V_driver.h: 100: long int freg_acc_x = -1295;
-"101
+[; ;Tomcat_V_driver.h: 101: long int freg_acc_x = -1295;
+"102
 [v _freg_acc_y `l ~T0 @X0 1 e ]
 [i _freg_acc_y
 -> -U -> 315 `i `l
 ]
-[; ;Tomcat_V_driver.h: 101: long int freg_acc_y = -315;
-"102
+[; ;Tomcat_V_driver.h: 102: long int freg_acc_y = -315;
+"103
 [v _freg_acc_z `l ~T0 @X0 1 e ]
 [i _freg_acc_z
 -> -> 5375 `i `l
 ]
-[; ;Tomcat_V_driver.h: 102: long int freg_acc_z = 5375;
-[; ;Tomcat_V_driver.h: 135: void Thruster_Driver(int input, char thruster);
-[; ;Tomcat_V_driver.h: 136: void Tomcat_Setup();
-[; ;Tomcat_V_driver.h: 137: int Tomcat_Heading();
-[; ;Tomcat_V_driver.h: 138: int Tomcat_Pitch();
-[; ;Tomcat_V_driver.h: 139: int Tomcat_Roll();
-[; ;Tomcat_V_driver.h: 140: int Tomcat_Depth();
-[; ;Tomcat_V_driver.h: 141: int Tomcat_Press_Int();
-[; ;Tomcat_V_driver.h: 142: int Tomcat_Temp();
-[; ;Tomcat_V_driver.h: 143: int Tomcat_Temp_Ex();
-[; ;Tomcat_V_driver.h: 144: void Tomcat_Claw(int grip,int wrist);
-[; ;Tomcat_V_driver.h: 145: void Tomcat_TX_data(char tx_buff[], char num_bytes);
-[; ;Tomcat_V_driver.h: 146: void Tomcat_TX_warn(char code);
-[; ;Tomcat_V_driver.h: 147: void Tomcat_TX_error(char code);
-[; ;Tomcat_V_driver.h: 148: void Tomcat_Camera(int pan,int tilt);
-[; ;Tomcat_V_driver.h: 149: unsigned int analogRead(char channel);
-[v F8420 `(v ~T0 @X0 1 tf ]
+[; ;Tomcat_V_driver.h: 103: long int freg_acc_z = 5375;
+[; ;Tomcat_V_driver.h: 136: void Thruster_Driver(int input, char thruster);
+[; ;Tomcat_V_driver.h: 137: void Tomcat_Setup();
+[; ;Tomcat_V_driver.h: 138: int Tomcat_Heading();
+[; ;Tomcat_V_driver.h: 139: int Tomcat_Pitch();
+[; ;Tomcat_V_driver.h: 140: int Tomcat_Roll();
+[; ;Tomcat_V_driver.h: 141: int Tomcat_Depth();
+[; ;Tomcat_V_driver.h: 142: int Tomcat_Press_Int();
+[; ;Tomcat_V_driver.h: 143: int Tomcat_Temp();
+[; ;Tomcat_V_driver.h: 144: int Tomcat_Temp_Ex();
+[; ;Tomcat_V_driver.h: 145: void Tomcat_Claw(int grip,int wrist);
+[; ;Tomcat_V_driver.h: 146: void Tomcat_TX_data(char tx_buff[], char num_bytes);
+[; ;Tomcat_V_driver.h: 147: void Tomcat_TX_warn(char code);
+[; ;Tomcat_V_driver.h: 148: void Tomcat_TX_error(char code);
+[; ;Tomcat_V_driver.h: 149: void Tomcat_Camera(int pan,int tilt);
+[; ;Tomcat_V_driver.h: 150: unsigned int analogRead(char channel);
+[v F8421 `(v ~T0 @X0 1 tf ]
 "3 Tom_V_Main.c
-[v _isr `IF8420 ~T0 @X0 1 e ]
+[v _isr `IF8421 ~T0 @X0 1 e ]
 {
 [; ;Tom_V_Main.c: 3: void interrupt isr(void) {
 [e :U _isr ]
@@ -7978,484 +7999,550 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Tom_V_Main.c: 4: INTCONbits.GIE = 0;
 "4
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 5: if (INTCONbits.TMR0IF) {
+[; ;Tom_V_Main.c: 5: if (OSCFIF){
 "5
-[e $ ! != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 1151  ]
+[e $ ! _OSCFIF 1151  ]
 {
-[; ;Tom_V_Main.c: 6: INTCONbits.TMR0IF = 0;
+[; ;Tom_V_Main.c: 6: PORTBbits.RB1 = 1;
 "6
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 7: TMR0=0;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
 "7
-[e = _TMR0 -> -> 0 `i `us ]
-[; ;Tom_V_Main.c: 8: tmr0_flag = 1;
-"8
-[e = _tmr0_flag -> -> 1 `i `b ]
-[; ;Tom_V_Main.c: 9: time++;
-"9
-[e ++ _time -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 10: asm(" clrwdt");
-"10
-[; <"  clrwdt ;# ">
-"11
 }
 [e :U 1151 ]
-[; ;Tom_V_Main.c: 11: }
-[; ;Tom_V_Main.c: 12: if (PIR1bits.TMR1IF) {
-"12
-[e $ ! != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1152  ]
+[; ;Tom_V_Main.c: 7: }
+[; ;Tom_V_Main.c: 8: if (INTCONbits.TMR0IF) {
+"8
+[e $ ! != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 1152  ]
 {
-[; ;Tom_V_Main.c: 13: PIR1bits.TMR1IF = 0;
-"13
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 14: TMR1=0;
+[; ;Tom_V_Main.c: 9: INTCONbits.TMR0IF = 0;
+"9
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 10: TMR0=0;
+"10
+[e = _TMR0 -> -> 0 `i `us ]
+[; ;Tom_V_Main.c: 11: tmr0_flag = 1;
+"11
+[e = _tmr0_flag -> -> 1 `i `b ]
+[; ;Tom_V_Main.c: 12: time++;
+"12
+[e ++ _time -> -> 1 `i `uc ]
 "14
-[e = _TMR1 -> -> 0 `i `us ]
-[; ;Tom_V_Main.c: 15: comms_time++;
-"15
-[e ++ _comms_time -> -> 1 `i `ui ]
-[; ;Tom_V_Main.c: 16: tmr1_flag = 1;
-"16
-[e = _tmr1_flag -> -> 1 `i `b ]
-[; ;Tom_V_Main.c: 17: asm(" clrwdt");
-"17
-[; <"  clrwdt ;# ">
-"18
 }
 [e :U 1152 ]
-[; ;Tom_V_Main.c: 18: }
-[; ;Tom_V_Main.c: 24: if (PIR1bits.RC1IF) {
-"24
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 1153  ]
+[; ;Tom_V_Main.c: 14: }
+[; ;Tom_V_Main.c: 15: if (PIR1bits.TMR1IF) {
+"15
+[e $ ! != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 1153  ]
 {
-[; ;Tom_V_Main.c: 25: PIR1bits.RC1IF = 0;
-"25
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 26: rx1_buff[rx1_count] = RCREG;
-"26
-[e = *U + &U _rx1_buff * -> _rx1_count `ux -> -> # *U &U _rx1_buff `ui `ux _RCREG ]
-[; ;Tom_V_Main.c: 27: if (rx1_buff[rx1_count] == 0x0a)rx1_flag = 1;
-"27
-[e $ ! == -> *U + &U _rx1_buff * -> _rx1_count `ux -> -> # *U &U _rx1_buff `ui `ux `i -> 10 `i 1154  ]
-[e = _rx1_flag -> -> 1 `i `b ]
+[; ;Tom_V_Main.c: 16: PIR1bits.TMR1IF = 0;
+"16
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 17: TMR1=0;
+"17
+[e = _TMR1 -> -> 0 `i `us ]
+[; ;Tom_V_Main.c: 18: comms_time++;
+"18
+[e ++ _comms_time -> -> 1 `i `ui ]
+[; ;Tom_V_Main.c: 19: if (comms_time > 20) LATAbits.LATA4 = 0;
+"19
+[e $ ! > _comms_time -> -> 20 `i `ui 1154  ]
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 [e :U 1154 ]
-[; ;Tom_V_Main.c: 28: if (rx1_buff[rx1_count++] == '$')rx1_count = 0;
-"28
-[e $ ! == -> *U + &U _rx1_buff * -> ++ _rx1_count -> -> 1 `i `uc `ux -> -> # *U &U _rx1_buff `ui `ux `ui -> 36 `ui 1155  ]
-[e = _rx1_count -> -> 0 `i `uc ]
-[e :U 1155 ]
-"38
+[; ;Tom_V_Main.c: 20: tmr1_flag = 1;
+"20
+[e = _tmr1_flag -> -> 1 `i `b ]
+"22
 }
 [e :U 1153 ]
-[; ;Tom_V_Main.c: 38: }
-[; ;Tom_V_Main.c: 39: if (PIR3bits.RC2IF) {
-"39
-[e $ ! != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i 1156  ]
+[; ;Tom_V_Main.c: 22: }
+[; ;Tom_V_Main.c: 28: if (PIR1bits.RC1IF) {
+"28
+[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 1155  ]
 {
-[; ;Tom_V_Main.c: 40: PIR3bits.RC2IF = 0;
-"40
-[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 41: rx2_flag = 1;
-"41
-[e = _rx2_flag -> -> 1 `i `b ]
-"42
-}
+[; ;Tom_V_Main.c: 29: PIR1bits.RC1IF = 0;
+"29
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 30: rx1_buff[rx1_count] = RCREG;
+"30
+[e = *U + &U _rx1_buff * -> _rx1_count `ux -> -> # *U &U _rx1_buff `ui `ux _RCREG ]
+[; ;Tom_V_Main.c: 31: if (rx1_count > 43) rx1_count = 0;
+"31
+[e $ ! > -> _rx1_count `i -> 43 `i 1156  ]
+[e = _rx1_count -> -> 0 `i `uc ]
 [e :U 1156 ]
-[; ;Tom_V_Main.c: 42: }
-[; ;Tom_V_Main.c: 43: if (INTCONbits.INT0IF) {
-"43
-[e $ ! != -> . . _INTCONbits 0 1 `i -> -> -> 0 `i `Vuc `i 1157  ]
+[; ;Tom_V_Main.c: 32: if (rx1_buff[rx1_count] == 0x0a && rx1_buff[0] == '$'){
+"32
+[e $ ! && == -> *U + &U _rx1_buff * -> _rx1_count `ux -> -> # *U &U _rx1_buff `ui `ux `i -> 10 `i == -> *U + &U _rx1_buff * -> -> -> 0 `i `ui `ux -> -> # *U &U _rx1_buff `ui `ux `ui -> 36 `ui 1157  ]
 {
-[; ;Tom_V_Main.c: 44: INTCONbits.INT0IF = 0;
-"44
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 45: leak1_flag = 1;
-"45
-[e = _leak1_flag -> -> 1 `i `b ]
-[; ;Tom_V_Main.c: 46: Tomcat_TX_error('L');
-"46
-[e ( _Tomcat_TX_error (1 -> -> 76 `ui `uc ]
-"47
+[; ;Tom_V_Main.c: 33: for (rx1_count = rx1_count + 1; rx1_count < 45; rx1_count++) rx1_buff[rx1_count] = (0);
+"33
+{
+[e = _rx1_count -> + -> _rx1_count `i -> 1 `i `uc ]
+[e $U 1161  ]
+[e :U 1158 ]
+[e = *U + &U _rx1_buff * -> _rx1_count `ux -> -> # *U &U _rx1_buff `ui `ux -> -> 0 `i `uc ]
+[e ++ _rx1_count -> -> 1 `i `uc ]
+[e :U 1161 ]
+[e $ < -> _rx1_count `i -> 45 `i 1158  ]
+[e :U 1159 ]
+}
+[; ;Tom_V_Main.c: 34: if(rx1_flag == 0) strcpy(rx_temp_buff, rx1_buff);
+"34
+[e $ ! == -> _rx1_flag `i -> 0 `i 1162  ]
+[e ( _strcpy (2 , &U _rx_temp_buff -> &U _rx1_buff `*Cuc ]
+[e :U 1162 ]
+[; ;Tom_V_Main.c: 35: rx1_flag = 1;
+"35
+[e = _rx1_flag -> -> 1 `i `b ]
+[; ;Tom_V_Main.c: 36: rx1_count = 0;
+"36
+[e = _rx1_count -> -> 0 `i `uc ]
+"37
 }
 [e :U 1157 ]
-[; ;Tom_V_Main.c: 47: }
-[; ;Tom_V_Main.c: 48: INTCONbits.GIE = 1;
-"48
+[; ;Tom_V_Main.c: 37: }
+[; ;Tom_V_Main.c: 38: if (rx1_buff[rx1_count++] == '$'){
+"38
+[e $ ! == -> *U + &U _rx1_buff * -> ++ _rx1_count -> -> 1 `i `uc `ux -> -> # *U &U _rx1_buff `ui `ux `ui -> 36 `ui 1163  ]
+{
+[; ;Tom_V_Main.c: 39: rx1_buff[0] = '$';
+"39
+[e = *U + &U _rx1_buff * -> -> -> 0 `i `ui `ux -> -> # *U &U _rx1_buff `ui `ux -> -> 36 `ui `uc ]
+[; ;Tom_V_Main.c: 40: rx1_count = 1;
+"40
+[e = _rx1_count -> -> 1 `i `uc ]
+"41
+}
+[e :U 1163 ]
+"52
+}
+[e :U 1155 ]
+[; ;Tom_V_Main.c: 41: }
+[; ;Tom_V_Main.c: 52: }
+[; ;Tom_V_Main.c: 53: if (PIR3bits.RC2IF) {
+"53
+[e $ ! != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i 1164  ]
+{
+[; ;Tom_V_Main.c: 54: PIR3bits.RC2IF = 0;
+"54
+[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 55: rx2_flag = 1;
+"55
+[e = _rx2_flag -> -> 1 `i `b ]
+"56
+}
+[e :U 1164 ]
+[; ;Tom_V_Main.c: 56: }
+[; ;Tom_V_Main.c: 57: if (INTCONbits.INT0IF) {
+"57
+[e $ ! != -> . . _INTCONbits 0 1 `i -> -> -> 0 `i `Vuc `i 1165  ]
+{
+[; ;Tom_V_Main.c: 58: INTCONbits.INT0IF = 0;
+"58
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 59: leak1_flag = 1;
+"59
+[e = _leak1_flag -> -> 1 `i `b ]
+[; ;Tom_V_Main.c: 60: Tomcat_TX_error('L');
+"60
+[e ( _Tomcat_TX_error (1 -> -> 76 `ui `uc ]
+"61
+}
+[e :U 1165 ]
+[; ;Tom_V_Main.c: 61: }
+[; ;Tom_V_Main.c: 62: INTCONbits.GIE = 1;
+"62
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 49: }
-"49
+[; ;Tom_V_Main.c: 63: }
+"63
 [e :UE 1150 ]
 }
-"51
+"65
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;Tom_V_Main.c: 51: void main(void) {
+[; ;Tom_V_Main.c: 65: void main(void) {
 [e :U _main ]
 [f ]
-"53
+"67
 [v _heading `i ~T0 @X0 1 a ]
 [v _pitch `i ~T0 @X0 1 a ]
 [v _roll `i ~T0 @X0 1 a ]
-"54
+"68
 [v _depth `i ~T0 @X0 1 a ]
 [v _int_press `i ~T0 @X0 1 a ]
 [v _ex_temp `i ~T0 @X0 1 a ]
 [v _int_temp `i ~T0 @X0 1 a ]
-"55
+"69
 [v _main_current `i ~T0 @X0 1 a ]
-[; ;Tom_V_Main.c: 53: int heading, pitch, roll;
-[; ;Tom_V_Main.c: 54: int depth, int_press, ex_temp, int_temp;
-[; ;Tom_V_Main.c: 55: int main_current = 0, v_current = 0;
+[; ;Tom_V_Main.c: 67: int heading, pitch, roll;
+[; ;Tom_V_Main.c: 68: int depth, int_press, ex_temp, int_temp;
+[; ;Tom_V_Main.c: 69: int main_current = 0, v_current = 0;
 [e = _main_current -> 0 `i ]
 [v _v_current `i ~T0 @X0 1 a ]
 [e = _v_current -> 0 `i ]
-"56
+"70
 [v _comms_timed_out `uc ~T0 @X0 1 a ]
-[; ;Tom_V_Main.c: 56: char comms_timed_out = 0;
+[; ;Tom_V_Main.c: 70: char comms_timed_out = 0;
 [e = _comms_timed_out -> -> 0 `i `uc ]
-"57
+"71
 [v _surf_buff `uc ~T0 @X0 -> 60 `i a ]
-[v F8435 `i ~T0 @X0 -> 15 `i s ]
-[i F8435
+[v F8436 `i ~T0 @X0 -> 15 `i s ]
+[i F8436
 :U ..
-"58
+"72
 -> 0 `i
 ..
 ]
 [v _input `i ~T0 @X0 -> 15 `i a ]
-[; ;Tom_V_Main.c: 57: char surf_buff[60];
-[; ;Tom_V_Main.c: 58: int input[15] = {0};
-[e = _input F8435 ]
-"59
+[; ;Tom_V_Main.c: 71: char surf_buff[60];
+[; ;Tom_V_Main.c: 72: int input[15] = {0};
+[e = _input F8436 ]
+"73
 [v _token `*uc ~T0 @X0 1 a ]
-[v F8438 `Cuc ~T0 @X0 -> 2 `i s ]
-[i F8438
+[v F8439 `Cuc ~T0 @X0 -> 2 `i s ]
+[i F8439
 :U ..
 -> 44 `c
 -> 0 `c
 ..
 ]
-"60
+"74
 [v _delimit `Cuc ~T0 @X0 -> 2 `i a ]
-[; ;Tom_V_Main.c: 59: char *token;
-[; ;Tom_V_Main.c: 60: const char delimit[2] = ",";
-[e = _delimit F8438 ]
-"61
-[v _in_count `uc ~T0 @X0 1 a ]
-[; ;Tom_V_Main.c: 61: char in_count = 0;
-[e = _in_count -> -> 0 `i `uc ]
-"62
-[v _check `ui ~T0 @X0 1 a ]
-[; ;Tom_V_Main.c: 62: unsigned int check = 0;
-[e = _check -> -> 0 `i `ui ]
-[; ;Tom_V_Main.c: 65: __nop();
-"65
-[e ( ___nop ..  ]
-[; ;Tom_V_Main.c: 66: __nop();
-"66
-[e ( ___nop ..  ]
-[; ;Tom_V_Main.c: 67: asm(" clrwdt");
-"67
-[; <"  clrwdt ;# ">
-[; ;Tom_V_Main.c: 68: RCON = 0b01111111;
-"68
-[e = _RCON -> -> 127 `i `uc ]
-[; ;Tom_V_Main.c: 69: Tomcat_Setup();
-"69
-[e ( _Tomcat_Setup ..  ]
-[; ;Tom_V_Main.c: 70: Thruster_Driver(0, 1);
-"70
-[e ( _Thruster_Driver (2 , -> 0 `i -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 71: Thruster_Driver(0, 2);
-"71
-[e ( _Thruster_Driver (2 , -> 0 `i -> -> 2 `i `uc ]
-[; ;Tom_V_Main.c: 72: Thruster_Driver(0, 3);
-"72
-[e ( _Thruster_Driver (2 , -> 0 `i -> -> 3 `i `uc ]
-[; ;Tom_V_Main.c: 73: Thruster_Driver(0, 4);
-"73
-[e ( _Thruster_Driver (2 , -> 0 `i -> -> 4 `i `uc ]
-[; ;Tom_V_Main.c: 75: while (1) {
+[; ;Tom_V_Main.c: 73: char *token;
+[; ;Tom_V_Main.c: 74: const char delimit[2] = ",";
+[e = _delimit F8439 ]
 "75
-[e :U 1160 ]
-{
-[; ;Tom_V_Main.c: 76: asm(" clrwdt");
+[v _in_count `uc ~T0 @X0 1 a ]
+[; ;Tom_V_Main.c: 75: char in_count = 0;
+[e = _in_count -> -> 0 `i `uc ]
 "76
-[; <"  clrwdt ;# ">
-[; ;Tom_V_Main.c: 77: sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d",
-[; ;Tom_V_Main.c: 78: depth, heading, pitch, roll, ex_temp, int_temp, int_press, main_current, v_current);
-"78
-[e ( _sprintf (1 , , , , , , , , , (. , &U _surf_buff :s 1C _depth _heading _pitch _roll _ex_temp _int_temp _int_press _main_current _v_current ]
-[; ;Tom_V_Main.c: 80: if (time > 10) {
+[v _check `ui ~T0 @X0 1 a ]
+[; ;Tom_V_Main.c: 76: unsigned int check = 0;
+[e = _check -> -> 0 `i `ui ]
+"77
+[v _check_recv `ui ~T0 @X0 1 a ]
+[; ;Tom_V_Main.c: 77: unsigned int check_recv = 0;
+[e = _check_recv -> -> 0 `i `ui ]
+[; ;Tom_V_Main.c: 80: __nop();
 "80
-[e $ ! > -> _time `i -> 10 `i 1162  ]
-{
-[; ;Tom_V_Main.c: 82: time = 1;
+[e ( ___nop ..  ]
+[; ;Tom_V_Main.c: 81: __nop();
+"81
+[e ( ___nop ..  ]
+[; ;Tom_V_Main.c: 82: asm(" clrwdt");
 "82
-[e = _time -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 84: depth = Tomcat_Depth();
-"84
-[e = _depth ( _Tomcat_Depth ..  ]
-[; ;Tom_V_Main.c: 86: int_press = Tomcat_Press_Int();
-"86
-[e = _int_press ( _Tomcat_Press_Int ..  ]
-[; ;Tom_V_Main.c: 87: if (int_press > 20)
-"87
-[e $ ! > _int_press -> 20 `i 1163  ]
-[; ;Tom_V_Main.c: 88: Tomcat_TX_warn('P');
-"88
-[e ( _Tomcat_TX_warn (1 -> -> 80 `ui `uc ]
-[e :U 1163 ]
-[; ;Tom_V_Main.c: 89: if (int_press > 20)
-"89
-[e $ ! > _int_press -> 20 `i 1164  ]
-[; ;Tom_V_Main.c: 90: Tomcat_TX_error('P');
-"90
-[e ( _Tomcat_TX_error (1 -> -> 80 `ui `uc ]
-[e :U 1164 ]
-[; ;Tom_V_Main.c: 92: int_temp = Tomcat_Temp();
-"92
-[e = _int_temp ( _Tomcat_Temp ..  ]
-[; ;Tom_V_Main.c: 93: if (int_temp > 65)
-"93
-[e $ ! > _int_temp -> 65 `i 1165  ]
-[; ;Tom_V_Main.c: 94: Tomcat_TX_warn('T');
-"94
-[e ( _Tomcat_TX_warn (1 -> -> 84 `ui `uc ]
-[e :U 1165 ]
-[; ;Tom_V_Main.c: 95: if (int_temp > 75)
-"95
-[e $ ! > _int_temp -> 75 `i 1166  ]
-[; ;Tom_V_Main.c: 96: Tomcat_TX_error('T');
-"96
-[e ( _Tomcat_TX_error (1 -> -> 84 `ui `uc ]
-[e :U 1166 ]
-[; ;Tom_V_Main.c: 98: ex_temp = Tomcat_Temp_Ex();
-"98
-[e = _ex_temp ( _Tomcat_Temp_Ex ..  ]
-"100
-}
-[e :U 1162 ]
-[; ;Tom_V_Main.c: 100: }
-[; ;Tom_V_Main.c: 101: if (((time % 5) == 0) && tmr0_flag) {
-"101
-[e $ ! && == % -> _time `i -> 5 `i -> 0 `i _tmr0_flag 1167  ]
-{
-[; ;Tom_V_Main.c: 104: Tomcat_TX_data(surf_buff, strlen(surf_buff) - 1);
-"104
-[e ( _Tomcat_TX_data (2 , &U _surf_buff -> - ( _strlen (1 -> &U _surf_buff `*Cuc -> -> 1 `i `ui `uc ]
-"105
-}
-[e :U 1167 ]
-[; ;Tom_V_Main.c: 105: }
-[; ;Tom_V_Main.c: 106: asm(" clrwdt");
-"106
 [; <"  clrwdt ;# ">
-[; ;Tom_V_Main.c: 107: if (((time % 2) == 0) && tmr0_flag) {
-"107
-[e $ ! && == % -> _time `i -> 2 `i -> 0 `i _tmr0_flag 1168  ]
+[; ;Tom_V_Main.c: 83: RCON = 0b01111111;
+"83
+[e = _RCON -> -> 127 `i `uc ]
+[; ;Tom_V_Main.c: 84: Tomcat_Setup();
+"84
+[e ( _Tomcat_Setup ..  ]
+[; ;Tom_V_Main.c: 85: Thruster_Driver(0, 1);
+"85
+[e ( _Thruster_Driver (2 , -> 0 `i -> -> 1 `i `uc ]
+[; ;Tom_V_Main.c: 86: Thruster_Driver(0, 2);
+"86
+[e ( _Thruster_Driver (2 , -> 0 `i -> -> 2 `i `uc ]
+[; ;Tom_V_Main.c: 87: Thruster_Driver(0, 3);
+"87
+[e ( _Thruster_Driver (2 , -> 0 `i -> -> 3 `i `uc ]
+[; ;Tom_V_Main.c: 88: Thruster_Driver(0, 4);
+"88
+[e ( _Thruster_Driver (2 , -> 0 `i -> -> 4 `i `uc ]
+[; ;Tom_V_Main.c: 90: while (1) {
+"90
+[e :U 1168 ]
 {
-[; ;Tom_V_Main.c: 110: main_current = analogRead(1) * 5;
+[; ;Tom_V_Main.c: 91: asm(" clrwdt");
+"91
+[; <"  clrwdt ;# ">
+[; ;Tom_V_Main.c: 94: sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d ",
+[; ;Tom_V_Main.c: 95: input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8], check, check_recv, int_press);
+"95
+[e ( _sprintf (1 , , , , , , , , , , , , (. , &U _surf_buff :s 1C *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 1 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 2 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 3 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 4 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 5 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 6 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 7 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 8 `i `ui `ux -> -> # *U &U _input `ui `ux _check _check_recv _int_press ]
+[; ;Tom_V_Main.c: 97: if (time > 10) {
+"97
+[e $ ! > -> _time `i -> 10 `i 1170  ]
+{
+[; ;Tom_V_Main.c: 99: time = 1;
+"99
+[e = _time -> -> 1 `i `uc ]
+[; ;Tom_V_Main.c: 101: depth = Tomcat_Depth();
+"101
+[e = _depth ( _Tomcat_Depth ..  ]
+[; ;Tom_V_Main.c: 103: int_press = Tomcat_Press_Int();
+"103
+[e = _int_press ( _Tomcat_Press_Int ..  ]
+[; ;Tom_V_Main.c: 104: if (int_press > 850)
+"104
+[e $ ! > _int_press -> 850 `i 1171  ]
+[; ;Tom_V_Main.c: 105: Tomcat_TX_warn('P');
+"105
+[e ( _Tomcat_TX_warn (1 -> -> 80 `ui `uc ]
+[e :U 1171 ]
+[; ;Tom_V_Main.c: 106: if (int_press > 850)
+"106
+[e $ ! > _int_press -> 850 `i 1172  ]
+[; ;Tom_V_Main.c: 107: Tomcat_TX_error('P');
+"107
+[e ( _Tomcat_TX_error (1 -> -> 80 `ui `uc ]
+[e :U 1172 ]
+[; ;Tom_V_Main.c: 109: int_temp = Tomcat_Temp();
+"109
+[e = _int_temp ( _Tomcat_Temp ..  ]
+[; ;Tom_V_Main.c: 110: if (int_temp > 65)
 "110
-[e = _main_current -> * ( _analogRead (1 -> -> 1 `i `uc -> -> 5 `i `ui `i ]
-[; ;Tom_V_Main.c: 111: v_current = analogRead(0) * 1;
+[e $ ! > _int_temp -> 65 `i 1173  ]
+[; ;Tom_V_Main.c: 111: Tomcat_TX_warn('T');
 "111
-[e = _v_current -> * ( _analogRead (1 -> -> 0 `i `uc -> -> 1 `i `ui `i ]
-[; ;Tom_V_Main.c: 113: if (v_current > 2003)
+[e ( _Tomcat_TX_warn (1 -> -> 84 `ui `uc ]
+[e :U 1173 ]
+[; ;Tom_V_Main.c: 112: if (int_temp > 75)
+"112
+[e $ ! > _int_temp -> 75 `i 1174  ]
+[; ;Tom_V_Main.c: 113: Tomcat_TX_error('T');
 "113
-[e $ ! > _v_current -> 2003 `i 1169  ]
-[; ;Tom_V_Main.c: 114: Tomcat_TX_warn('C');
-"114
-[e ( _Tomcat_TX_warn (1 -> -> 67 `ui `uc ]
-[e :U 1169 ]
-[; ;Tom_V_Main.c: 115: if (v_current > 2000)
+[e ( _Tomcat_TX_error (1 -> -> 84 `ui `uc ]
+[e :U 1174 ]
+[; ;Tom_V_Main.c: 115: ex_temp = Tomcat_Temp_Ex();
 "115
-[e $ ! > _v_current -> 2000 `i 1170  ]
-[; ;Tom_V_Main.c: 116: Tomcat_TX_error('C');
-"116
-[e ( _Tomcat_TX_error (1 -> -> 67 `ui `uc ]
-[e :U 1170 ]
+[e = _ex_temp ( _Tomcat_Temp_Ex ..  ]
 "117
 }
-[e :U 1168 ]
+[e :U 1170 ]
 [; ;Tom_V_Main.c: 117: }
-[; ;Tom_V_Main.c: 118: if (tmr0_flag) {
+[; ;Tom_V_Main.c: 118: if (((time % 5) == 0) && tmr0_flag) {
 "118
-[e $ ! _tmr0_flag 1171  ]
+[e $ ! && == % -> _time `i -> 5 `i -> 0 `i _tmr0_flag 1175  ]
 {
-[; ;Tom_V_Main.c: 120: tmr0_flag = 0;
-"120
-[e = _tmr0_flag -> -> 0 `i `b ]
-"125
+[; ;Tom_V_Main.c: 121: Tomcat_TX_data(surf_buff, strlen(surf_buff) - 1);
+"121
+[e ( _Tomcat_TX_data (2 , &U _surf_buff -> - ( _strlen (1 -> &U _surf_buff `*Cuc -> -> 1 `i `ui `uc ]
+"122
 }
-[e :U 1171 ]
-[; ;Tom_V_Main.c: 125: }
-[; ;Tom_V_Main.c: 127: asm(" clrwdt");
-"127
-[; <"  clrwdt ;# ">
-[; ;Tom_V_Main.c: 128: if (comms_time > 20 || comms_timed_out) {
-"128
-[e $ ! || > _comms_time -> -> 20 `i `ui != -> _comms_timed_out `i -> -> -> 0 `i `uc `i 1172  ]
-{
-[; ;Tom_V_Main.c: 129: comms_timed_out = 1;
-"129
-[e = _comms_timed_out -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 130: LATAbits.LATA4 = 0;
-"130
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 131: Tomcat_TX_error('N');
-"131
-[e ( _Tomcat_TX_error (1 -> -> 78 `ui `uc ]
-"132
-}
-[e :U 1172 ]
-[; ;Tom_V_Main.c: 132: }
-[; ;Tom_V_Main.c: 133: if (rx1_flag == 1) {
-"133
-[e $ ! == -> _rx1_flag `i -> 1 `i 1173  ]
-{
-[; ;Tom_V_Main.c: 138: LATAbits.LATA4 = 1;
-"138
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 139: rx1_count = 0;
-"139
-[e = _rx1_count -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 140: rx1_flag = 0;
-"140
-[e = _rx1_flag -> -> 0 `i `b ]
-[; ;Tom_V_Main.c: 143: token = strtok(rx1_buff, delimit);
-"143
-[e = _token ( _strtok (2 , &U _rx1_buff &U _delimit ]
-[; ;Tom_V_Main.c: 144: input[0] = atoi(token);
-"144
-[e = *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux ( _atoi (1 -> _token `*Cuc ]
-[; ;Tom_V_Main.c: 145: check = input[0];
-"145
-[e = _check -> *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux `ui ]
-[; ;Tom_V_Main.c: 146: for (in_count = 1; in_count < 9; in_count++) {
-"146
-{
-[e = _in_count -> -> 1 `i `uc ]
-[e $ < -> _in_count `i -> 9 `i 1174  ]
-[e $U 1175  ]
-[e :U 1174 ]
-{
-[; ;Tom_V_Main.c: 147: token = strtok((0), delimit);
-"147
-[e = _token ( _strtok (2 , -> -> 0 `i `*uc &U _delimit ]
-[; ;Tom_V_Main.c: 148: input[in_count] = atoi(token);
-"148
-[e = *U + &U _input * -> _in_count `ux -> -> # *U &U _input `ui `ux ( _atoi (1 -> _token `*Cuc ]
-[; ;Tom_V_Main.c: 149: check = check + input[in_count];
-"149
-[e = _check + _check -> *U + &U _input * -> _in_count `ux -> -> # *U &U _input `ui `ux `ui ]
-"150
-}
-"146
-[e ++ _in_count -> -> 1 `i `uc ]
-[e $ < -> _in_count `i -> 9 `i 1174  ]
 [e :U 1175 ]
-"150
-}
-[; ;Tom_V_Main.c: 150: }
-[; ;Tom_V_Main.c: 152: if (check == (unsigned int) atoi(strtok((0), delimit))) {
-"152
-[e $ ! == _check -> ( _atoi (1 -> ( _strtok (2 , -> -> 0 `i `*uc &U _delimit `*Cuc `ui 1177  ]
+[; ;Tom_V_Main.c: 122: }
+[; ;Tom_V_Main.c: 123: asm(" clrwdt");
+"123
+[; <"  clrwdt ;# ">
+[; ;Tom_V_Main.c: 124: if (((time % 2) == 0) && tmr0_flag) {
+"124
+[e $ ! && == % -> _time `i -> 2 `i -> 0 `i _tmr0_flag 1176  ]
 {
-[; ;Tom_V_Main.c: 153: comms_time = 0;
-"153
-[e = _comms_time -> -> 0 `i `ui ]
-[; ;Tom_V_Main.c: 154: comms_timed_out = 0;
-"154
-[e = _comms_timed_out -> -> 0 `i `uc ]
-[; ;Tom_V_Main.c: 155: LATAbits.LATA4 = 1;
-"155
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 157: Thruster_Driver(input[0], 1);
-"157
-[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 1 `i `uc ]
-[; ;Tom_V_Main.c: 158: Thruster_Driver(input[1], 2);
-"158
-[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 1 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 2 `i `uc ]
-[; ;Tom_V_Main.c: 159: Thruster_Driver(input[2], 3);
-"159
-[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 2 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 3 `i `uc ]
-[; ;Tom_V_Main.c: 160: Thruster_Driver(input[3], 4);
-"160
-[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 3 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 4 `i `uc ]
-[; ;Tom_V_Main.c: 161: Tomcat_Claw(input[4], input[5]);
-"161
-[e ( _Tomcat_Claw (2 , *U + &U _input * -> -> -> 4 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 5 `i `ui `ux -> -> # *U &U _input `ui `ux ]
-[; ;Tom_V_Main.c: 162: Tomcat_Camera(input[6], input[7]);
-"162
-[e ( _Tomcat_Camera (2 , *U + &U _input * -> -> -> 6 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 7 `i `ui `ux -> -> # *U &U _input `ui `ux ]
-[; ;Tom_V_Main.c: 164: if (input[8]) {
-"164
-[e $ ! != *U + &U _input * -> -> -> 8 `i `ui `ux -> -> # *U &U _input `ui `ux -> 0 `i 1178  ]
-{
-[; ;Tom_V_Main.c: 165: LATDbits.LATD3 = 0;
-"165
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-"166
-}
-[; ;Tom_V_Main.c: 166: } else {
-[e $U 1179  ]
+[; ;Tom_V_Main.c: 127: main_current = analogRead(1) * 5;
+"127
+[e = _main_current -> * ( _analogRead (1 -> -> 1 `i `uc -> -> 5 `i `ui `i ]
+[; ;Tom_V_Main.c: 128: v_current = analogRead(0) * 1;
+"128
+[e = _v_current -> * ( _analogRead (1 -> -> 0 `i `uc -> -> 1 `i `ui `i ]
+[; ;Tom_V_Main.c: 130: if (v_current > 2003)
+"130
+[e $ ! > _v_current -> 2003 `i 1177  ]
+[; ;Tom_V_Main.c: 131: Tomcat_TX_warn('C');
+"131
+[e ( _Tomcat_TX_warn (1 -> -> 67 `ui `uc ]
+[e :U 1177 ]
+[; ;Tom_V_Main.c: 132: if (v_current > 2000)
+"132
+[e $ ! > _v_current -> 2000 `i 1178  ]
+[; ;Tom_V_Main.c: 133: Tomcat_TX_error('C');
+"133
+[e ( _Tomcat_TX_error (1 -> -> 67 `ui `uc ]
 [e :U 1178 ]
+"134
+}
+[e :U 1176 ]
+[; ;Tom_V_Main.c: 134: }
+[; ;Tom_V_Main.c: 135: if (tmr0_flag) {
+"135
+[e $ ! _tmr0_flag 1179  ]
 {
-[; ;Tom_V_Main.c: 167: LATDbits.LATD3 = 0;
-"167
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-"168
+[; ;Tom_V_Main.c: 137: tmr0_flag = 0;
+"137
+[e = _tmr0_flag -> -> 0 `i `b ]
+"142
 }
 [e :U 1179 ]
-"169
-}
-[e :U 1177 ]
-"171
-}
-[e :U 1173 ]
-[; ;Tom_V_Main.c: 168: }
-[; ;Tom_V_Main.c: 169: }
-[; ;Tom_V_Main.c: 171: }
-[; ;Tom_V_Main.c: 172: if (rx2_flag) {
-"172
-[e $ ! _rx2_flag 1180  ]
+[; ;Tom_V_Main.c: 142: }
+[; ;Tom_V_Main.c: 144: asm(" clrwdt");
+"144
+[; <"  clrwdt ;# ">
+[; ;Tom_V_Main.c: 145: if (comms_time > 20 || comms_timed_out) {
+"145
+[e $ ! || > _comms_time -> -> 20 `i `ui != -> _comms_timed_out `i -> -> -> 0 `i `uc `i 1180  ]
 {
-[; ;Tom_V_Main.c: 174: rx2_flag = 0;
-"174
-[e = _rx2_flag -> -> 0 `i `b ]
-"176
+[; ;Tom_V_Main.c: 146: comms_timed_out = 1;
+"146
+[e = _comms_timed_out -> -> 1 `i `uc ]
+[; ;Tom_V_Main.c: 147: LATAbits.LATA4 = 0;
+"147
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 148: Tomcat_TX_error('N');
+"148
+[e ( _Tomcat_TX_error (1 -> -> 78 `ui `uc ]
+"150
 }
 [e :U 1180 ]
-[; ;Tom_V_Main.c: 176: }
-[; ;Tom_V_Main.c: 177: asm(" clrwdt");
-"177
-[; <"  clrwdt ;# ">
-[; ;Tom_V_Main.c: 178: if (leak1_flag || PORTBbits.RB1) {
-"178
-[e $ ! || _leak1_flag != -> . . _PORTBbits 0 1 `i -> -> -> 0 `i `Vuc `i 1181  ]
+[; ;Tom_V_Main.c: 150: }
+[; ;Tom_V_Main.c: 151: if (rx1_flag == 1) {
+"151
+[e $ ! == -> _rx1_flag `i -> 1 `i 1181  ]
 {
-[; ;Tom_V_Main.c: 179: leak1_flag = 0;
+[; ;Tom_V_Main.c: 158: while((!TXSTA1bits.TRMT));
+"158
+[e $U 1182  ]
+[e :U 1183 ]
+[e :U 1182 ]
+[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1183  ]
+[e :U 1184 ]
+[; ;Tom_V_Main.c: 159: puts1USART(rx_temp_buff);
+"159
+[e ( _puts1USART (1 &U _rx_temp_buff ]
+[; ;Tom_V_Main.c: 161: token = strtok(&rx_temp_buff[1], ",");
+"161
+[e = _token ( _strtok (2 , &U *U + &U _rx_temp_buff * -> -> -> 1 `i `ui `ux -> -> # *U &U _rx_temp_buff `ui `ux :s 2C ]
+[; ;Tom_V_Main.c: 162: input[0] = atoi(token);
+"162
+[e = *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux ( _atoi (1 -> _token `*Cuc ]
+[; ;Tom_V_Main.c: 163: check = input[0];
+"163
+[e = _check -> *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux `ui ]
+[; ;Tom_V_Main.c: 164: for (in_count = 1; in_count < 9; in_count++) {
+"164
+{
+[e = _in_count -> -> 1 `i `uc ]
+[e $ < -> _in_count `i -> 9 `i 1185  ]
+[e $U 1186  ]
+[e :U 1185 ]
+{
+[; ;Tom_V_Main.c: 165: token = strtok((0), ",");
+"165
+[e = _token ( _strtok (2 , -> -> 0 `i `*uc :s 3C ]
+[; ;Tom_V_Main.c: 166: input[in_count] = atoi(token);
+"166
+[e = *U + &U _input * -> _in_count `ux -> -> # *U &U _input `ui `ux ( _atoi (1 -> _token `*Cuc ]
+[; ;Tom_V_Main.c: 167: check = check + input[in_count];
+"167
+[e = _check + _check -> *U + &U _input * -> _in_count `ux -> -> # *U &U _input `ui `ux `ui ]
+"168
+}
+"164
+[e ++ _in_count -> -> 1 `i `uc ]
+[e $ < -> _in_count `i -> 9 `i 1185  ]
+[e :U 1186 ]
+"168
+}
+[; ;Tom_V_Main.c: 168: }
+[; ;Tom_V_Main.c: 169: check_recv = atoi(strtok((0), ","));
+"169
+[e = _check_recv -> ( _atoi (1 -> ( _strtok (2 , -> -> 0 `i `*uc :s 4C `*Cuc `ui ]
+[; ;Tom_V_Main.c: 171: if (check == check_recv) {
+"171
+[e $ ! == _check _check_recv 1188  ]
+{
+[; ;Tom_V_Main.c: 172: comms_time = 0;
+"172
+[e = _comms_time -> -> 0 `i `ui ]
+[; ;Tom_V_Main.c: 173: comms_timed_out = 0;
+"173
+[e = _comms_timed_out -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 174: LATAbits.LATA4 = 1;
+"174
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+[; ;Tom_V_Main.c: 176: Thruster_Driver(input[0], 1);
+"176
+[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 1 `i `uc ]
+[; ;Tom_V_Main.c: 177: Thruster_Driver(input[1], 2);
+"177
+[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 1 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 2 `i `uc ]
+[; ;Tom_V_Main.c: 178: Thruster_Driver(input[2], 3);
+"178
+[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 2 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 3 `i `uc ]
+[; ;Tom_V_Main.c: 179: Thruster_Driver(input[3], 4);
 "179
-[e = _leak1_flag -> -> 0 `i `b ]
-[; ;Tom_V_Main.c: 180: Tomcat_TX_error('L');
+[e ( _Thruster_Driver (2 , *U + &U _input * -> -> -> 3 `i `ui `ux -> -> # *U &U _input `ui `ux -> -> 4 `i `uc ]
+[; ;Tom_V_Main.c: 180: Tomcat_Claw(input[4], input[5]);
 "180
-[e ( _Tomcat_TX_error (1 -> -> 76 `ui `uc ]
+[e ( _Tomcat_Claw (2 , *U + &U _input * -> -> -> 4 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 5 `i `ui `ux -> -> # *U &U _input `ui `ux ]
+[; ;Tom_V_Main.c: 181: Tomcat_Camera(input[6], input[7]);
 "181
+[e ( _Tomcat_Camera (2 , *U + &U _input * -> -> -> 6 `i `ui `ux -> -> # *U &U _input `ui `ux *U + &U _input * -> -> -> 7 `i `ui `ux -> -> # *U &U _input `ui `ux ]
+[; ;Tom_V_Main.c: 183: if (input[8]) {
+"183
+[e $ ! != *U + &U _input * -> -> -> 8 `i `ui `ux -> -> # *U &U _input `ui `ux -> 0 `i 1189  ]
+{
+[; ;Tom_V_Main.c: 184: LATDbits.LATD3 = 1;
+"184
+[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
+"185
+}
+[; ;Tom_V_Main.c: 185: } else {
+[e $U 1190  ]
+[e :U 1189 ]
+{
+[; ;Tom_V_Main.c: 186: LATDbits.LATD3 = 0;
+"186
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
+"187
+}
+[e :U 1190 ]
+"188
+}
+[e :U 1188 ]
+[; ;Tom_V_Main.c: 187: }
+[; ;Tom_V_Main.c: 188: }
+[; ;Tom_V_Main.c: 189: rx1_count = 0;
+"189
+[e = _rx1_count -> -> 0 `i `uc ]
+[; ;Tom_V_Main.c: 190: rx1_flag = 0;
+"190
+[e = _rx1_flag -> -> 0 `i `b ]
+"191
 }
 [e :U 1181 ]
-"182
+[; ;Tom_V_Main.c: 191: }
+[; ;Tom_V_Main.c: 192: if (rx2_flag) {
+"192
+[e $ ! _rx2_flag 1191  ]
+{
+[; ;Tom_V_Main.c: 194: rx2_flag = 0;
+"194
+[e = _rx2_flag -> -> 0 `i `b ]
+"196
 }
-[e :U 1159 ]
-"75
-[e $U 1160  ]
-[e :U 1161 ]
-[; ;Tom_V_Main.c: 181: }
-[; ;Tom_V_Main.c: 182: }
-[; ;Tom_V_Main.c: 183: }
-"183
-[e :UE 1158 ]
+[e :U 1191 ]
+[; ;Tom_V_Main.c: 196: }
+[; ;Tom_V_Main.c: 197: asm(" clrwdt");
+"197
+[; <"  clrwdt ;# ">
+[; ;Tom_V_Main.c: 198: if (leak1_flag || PORTBbits.RB1) {
+"198
+[e $ ! || _leak1_flag != -> . . _PORTBbits 0 1 `i -> -> -> 0 `i `Vuc `i 1192  ]
+{
+[; ;Tom_V_Main.c: 199: leak1_flag = 0;
+"199
+[e = _leak1_flag -> -> 0 `i `b ]
+[; ;Tom_V_Main.c: 200: Tomcat_TX_error('L');
+"200
+[e ( _Tomcat_TX_error (1 -> -> 76 `ui `uc ]
+"201
+}
+[e :U 1192 ]
+"202
+}
+[e :U 1167 ]
+"90
+[e $U 1168  ]
+[e :U 1169 ]
+[; ;Tom_V_Main.c: 201: }
+[; ;Tom_V_Main.c: 202: }
+[; ;Tom_V_Main.c: 203: }
+"203
+[e :UE 1166 ]
 }
 [p f _sprintf 8388736 ]
-[a 1C 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 0 ]
-
+[a 2C 44 0 ]
+[a 3C 44 0 ]
+[a 4C 44 0 ]
+[a 1C 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 44 37 100 32 0 ]

@@ -9725,7 +9725,8 @@ char time=1;
 int accel[3];
 int gyro[3];
 int mag[3];
-unsigned char rx1_buff[40];
+unsigned char rx1_buff[45];
+unsigned char rx_temp_buff[45];
 char rx1_count=0;
 unsigned int comms_time=0;
 
@@ -9738,7 +9739,7 @@ long int freg_acc_x = -1295;
 long int freg_acc_y = -315;
 long int freg_acc_z = 5375;
 
-# 135
+# 136
 void Thruster_Driver(int input, char thruster);
 void Tomcat_Setup();
 int Tomcat_Heading();
@@ -9767,6 +9768,7 @@ ADCON2 = 0b10100011;
 
 INTCON = 0b11110000;
 PIE1 = 0b00100001;
+PIE2bits.OSCFIE = 1;
 
 TRISA = 0b11101111;
 ANSELA = 0b00101111;
@@ -9826,7 +9828,7 @@ Open1USART(0b01111111 &
 0b11111111, (unsigned char)(((float)20000000/(16.0*(float)9600))+1));
 asm(" clrwdt");
 
-# 89
+# 90
 }
 
 void Thruster_Driver(int input, char thruster) {
@@ -9958,7 +9960,11 @@ return depth;
 
 int Tomcat_Press_Int() {
 int press = 0;
-press = (analogRead(2) - 41) / 922 * 101.5;
+float temp = 0.0;
+temp = analogRead(2)*0.0048 * 0.2;
+temp = temp - 0.04;
+temp = temp * 777.7;
+press = (int)temp;
 return press;
 }
 
@@ -10014,6 +10020,7 @@ for (k = 0; k < num_bytes; k++) {
 while ((!TXSTA1bits.TRMT));
 Write1USART(tx_buff[k]);
 }
+while ((!TXSTA1bits.TRMT));
 Write1USART('\n');
 }
 

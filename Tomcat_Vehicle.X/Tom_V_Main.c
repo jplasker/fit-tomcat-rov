@@ -2,6 +2,9 @@
 
 void interrupt isr(void) {
     GLOBAL_INT = 0;
+    if (OSCFIF){
+        LEAK_1 = 1;
+    }
     if (TMR0_INT) {
         TMR0_INT = 0;
         TMR0_RESET();
@@ -155,15 +158,15 @@ void main(void) {
             while(Busy1USART());
             puts1USART(rx_temp_buff);
             
-            token = strtok(&rx_temp_buff[1], delimit);
+            token = strtok(&rx_temp_buff[1], ",");//delimit);
             input[0] = atoi(token);
             check = input[0];
             for (in_count = 1; in_count < SUR_PACK_LEN; in_count++) {
-                token = strtok(NULL, delimit);
+                token = strtok(NULL, ",");//delimit);
                 input[in_count] = atoi(token);
                 check = check + input[in_count];
             }
-            check_recv = atoi(strtok(NULL, delimit));
+            check_recv = atoi(strtok(NULL, ","));//delimit));
             //check checksum
             if (check == check_recv) {
                 comms_time = 0;

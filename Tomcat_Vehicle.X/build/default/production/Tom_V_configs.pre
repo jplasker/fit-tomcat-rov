@@ -10385,7 +10385,7 @@ extern __nonreentrant void _delay3(unsigned char);
 
 
 #pragma config WDTEN = ON
-#pragma config WDTPS = 32768
+#pragma config WDTPS = 16
 
 
 #pragma config CCP2MX = PORTC1

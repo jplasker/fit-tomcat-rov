@@ -9725,7 +9725,8 @@ char time=1;
 int accel[3];
 int gyro[3];
 int mag[3];
-unsigned char rx1_buff[40];
+unsigned char rx1_buff[45];
+unsigned char rx_temp_buff[45];
 char rx1_count=0;
 unsigned int comms_time=0;
 
@@ -9738,7 +9739,7 @@ long int freg_acc_x = -1295;
 long int freg_acc_y = -315;
 long int freg_acc_z = 5375;
 
-# 135
+# 136
 void Thruster_Driver(int input, char thruster);
 void Tomcat_Setup();
 int Tomcat_Heading();
@@ -9758,29 +9759,42 @@ unsigned int analogRead(char channel);
 # 3 "Tom_V_Main.c"
 void interrupt isr(void) {
 INTCONbits.GIE = 0;
+if (OSCFIF){
+PORTBbits.RB1 = 1;
+}
 if (INTCONbits.TMR0IF) {
 INTCONbits.TMR0IF = 0;
 TMR0=0;
 tmr0_flag = 1;
 time++;
-asm(" clrwdt");
+
 }
 if (PIR1bits.TMR1IF) {
 PIR1bits.TMR1IF = 0;
 TMR1=0;
 comms_time++;
+if (comms_time > 20) LATAbits.LATA4 = 0;
 tmr1_flag = 1;
-asm(" clrwdt");
+
 }
 
-# 24
+# 28
 if (PIR1bits.RC1IF) {
 PIR1bits.RC1IF = 0;
 rx1_buff[rx1_count] = RCREG;
-if (rx1_buff[rx1_count] == 0x0a)rx1_flag = 1;
-if (rx1_buff[rx1_count++] == '$')rx1_count = 0;
+if (rx1_count > 43) rx1_count = 0;
+if (rx1_buff[rx1_count] == 0x0a && rx1_buff[0] == '$'){
+for (rx1_count = rx1_count + 1; rx1_count < 45; rx1_count++) rx1_buff[rx1_count] = (0);
+if(rx1_flag == 0) strcpy(rx_temp_buff, rx1_buff);
+rx1_flag = 1;
+rx1_count = 0;
+}
+if (rx1_buff[rx1_count++] == '$'){
+rx1_buff[0] = '$';
+rx1_count = 1;
+}
 
-# 38
+# 52
 }
 if (PIR3bits.RC2IF) {
 PIR3bits.RC2IF = 0;
@@ -9806,6 +9820,7 @@ char *token;
 const char delimit[2] = ",";
 char in_count = 0;
 unsigned int check = 0;
+unsigned int check_recv = 0;
 
 
 __nop();
@@ -9820,8 +9835,10 @@ Thruster_Driver(0, 4);
 
 while (1) {
 asm(" clrwdt");
-sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d",
-depth, heading, pitch, roll, ex_temp, int_temp, int_press, main_current, v_current);
+
+
+sprintf(surf_buff, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d ",
+input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8], check, check_recv, int_press);
 
 if (time > 10) {
 
@@ -9830,9 +9847,9 @@ time = 1;
 depth = Tomcat_Depth();
 
 int_press = Tomcat_Press_Int();
-if (int_press > 20)
+if (int_press > 850)
 Tomcat_TX_warn('P');
-if (int_press > 20)
+if (int_press > 850)
 Tomcat_TX_error('P');
 
 int_temp = Tomcat_Temp();
@@ -9875,27 +9892,25 @@ if (comms_time > 20 || comms_timed_out) {
 comms_timed_out = 1;
 LATAbits.LATA4 = 0;
 Tomcat_TX_error('N');
+
 }
 if (rx1_flag == 1) {
 
+# 158
+while((!TXSTA1bits.TRMT));
+puts1USART(rx_temp_buff);
 
-
-
-LATAbits.LATA4 = 1;
-rx1_count = 0;
-rx1_flag = 0;
-
-
-token = strtok(rx1_buff, delimit);
+token = strtok(&rx_temp_buff[1], ",");
 input[0] = atoi(token);
 check = input[0];
 for (in_count = 1; in_count < 9; in_count++) {
-token = strtok((0), delimit);
+token = strtok((0), ",");
 input[in_count] = atoi(token);
 check = check + input[in_count];
 }
+check_recv = atoi(strtok((0), ","));
 
-if (check == (unsigned int) atoi(strtok((0), delimit))) {
+if (check == check_recv) {
 comms_time = 0;
 comms_timed_out = 0;
 LATAbits.LATA4 = 1;
@@ -9908,12 +9923,13 @@ Tomcat_Claw(input[4], input[5]);
 Tomcat_Camera(input[6], input[7]);
 
 if (input[8]) {
-LATDbits.LATD3 = 0;
+LATDbits.LATD3 = 1;
 } else {
 LATDbits.LATD3 = 0;
 }
 }
-
+rx1_count = 0;
+rx1_flag = 0;
 }
 if (rx2_flag) {
 

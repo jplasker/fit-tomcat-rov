@@ -9,6 +9,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
 "9748
 [v _PIE1 `Vuc ~T0 @X0 0 e@3997 ]
+[s S571 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S571 . CCP2IE TMR3IE HLVDIE BCL1IE EEIE C2IE C1IE OSCFIE ]
+[s S572 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S572 . . LVDIE BCLIE ]
+[s S573 :6 `uc 1 :1 `uc 1 ]
+[n S573 . . CMIE ]
+[u S570 `S571 1 `S572 1 `S573 1 ]
+[n S570 . . . . ]
+"10002
+[v _PIE2bits `VS570 ~T0 @X0 0 e@4000 ]
 "8401
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
 "44
@@ -137,7 +147,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _atan `(d ~T0 @X0 0 ef1`d ]
 "117 LSM9DS0.h
 [v _readLSM9_accel `(v ~T0 @X0 0 ef1`*ui ]
-"149 Tomcat_V_driver.h
+"150 Tomcat_V_driver.h
 [v _analogRead `(ui ~T0 @X0 0 ef1`uc ]
 "16 C:\Program Files (x86)\Microchip\xc8\v1.30\include\math.h
 [v _log `(d ~T0 @X0 0 ef1`d ]
@@ -7985,71 +7995,74 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _mag `i ~T0 @X0 -> 3 `i e ]
 [; ;Tomcat_V_driver.h: 90: int mag[3];
 "91
-[v _rx1_buff `uc ~T0 @X0 -> 40 `i e ]
-[; ;Tomcat_V_driver.h: 91: unsigned char rx1_buff[40];
+[v _rx1_buff `uc ~T0 @X0 -> 45 `i e ]
+[; ;Tomcat_V_driver.h: 91: unsigned char rx1_buff[45];
 "92
+[v _rx_temp_buff `uc ~T0 @X0 -> 45 `i e ]
+[; ;Tomcat_V_driver.h: 92: unsigned char rx_temp_buff[45];
+"93
 [v _rx1_count `uc ~T0 @X0 1 e ]
 [i _rx1_count
 -> -> 0 `i `uc
 ]
-[; ;Tomcat_V_driver.h: 92: char rx1_count=0;
-"93
+[; ;Tomcat_V_driver.h: 93: char rx1_count=0;
+"94
 [v _comms_time `ui ~T0 @X0 1 e ]
 [i _comms_time
 -> -> 0 `i `ui
 ]
-[; ;Tomcat_V_driver.h: 93: unsigned int comms_time=0;
-"97
+[; ;Tomcat_V_driver.h: 94: unsigned int comms_time=0;
+"98
 [v _freg_mag_x `l ~T0 @X0 1 e ]
 [i _freg_mag_x
 -> -U -> 135 `i `l
 ]
-[; ;Tomcat_V_driver.h: 97: long int freg_mag_x = -135;
-"98
+[; ;Tomcat_V_driver.h: 98: long int freg_mag_x = -135;
+"99
 [v _freg_mag_y `l ~T0 @X0 1 e ]
 [i _freg_mag_y
 -> -> 1055 `i `l
 ]
-[; ;Tomcat_V_driver.h: 98: long int freg_mag_y = 1055;
-"99
+[; ;Tomcat_V_driver.h: 99: long int freg_mag_y = 1055;
+"100
 [v _freg_mag_z `l ~T0 @X0 1 e ]
 [i _freg_mag_z
 -> -> 10725 `i `l
 ]
-[; ;Tomcat_V_driver.h: 99: long int freg_mag_z = 10725;
-"100
+[; ;Tomcat_V_driver.h: 100: long int freg_mag_z = 10725;
+"101
 [v _freg_acc_x `l ~T0 @X0 1 e ]
 [i _freg_acc_x
 -> -U -> 1295 `i `l
 ]
-[; ;Tomcat_V_driver.h: 100: long int freg_acc_x = -1295;
-"101
+[; ;Tomcat_V_driver.h: 101: long int freg_acc_x = -1295;
+"102
 [v _freg_acc_y `l ~T0 @X0 1 e ]
 [i _freg_acc_y
 -> -U -> 315 `i `l
 ]
-[; ;Tomcat_V_driver.h: 101: long int freg_acc_y = -315;
-"102
+[; ;Tomcat_V_driver.h: 102: long int freg_acc_y = -315;
+"103
 [v _freg_acc_z `l ~T0 @X0 1 e ]
 [i _freg_acc_z
 -> -> 5375 `i `l
 ]
-[; ;Tomcat_V_driver.h: 102: long int freg_acc_z = 5375;
-[; ;Tomcat_V_driver.h: 135: void Thruster_Driver(int input, char thruster);
-[; ;Tomcat_V_driver.h: 136: void Tomcat_Setup();
-[; ;Tomcat_V_driver.h: 137: int Tomcat_Heading();
-[; ;Tomcat_V_driver.h: 138: int Tomcat_Pitch();
-[; ;Tomcat_V_driver.h: 139: int Tomcat_Roll();
-[; ;Tomcat_V_driver.h: 140: int Tomcat_Depth();
-[; ;Tomcat_V_driver.h: 141: int Tomcat_Press_Int();
-[; ;Tomcat_V_driver.h: 142: int Tomcat_Temp();
-[; ;Tomcat_V_driver.h: 143: int Tomcat_Temp_Ex();
-[; ;Tomcat_V_driver.h: 144: void Tomcat_Claw(int grip,int wrist);
-[; ;Tomcat_V_driver.h: 145: void Tomcat_TX_data(char tx_buff[], char num_bytes);
-[; ;Tomcat_V_driver.h: 146: void Tomcat_TX_warn(char code);
-[; ;Tomcat_V_driver.h: 147: void Tomcat_TX_error(char code);
-[; ;Tomcat_V_driver.h: 148: void Tomcat_Camera(int pan,int tilt);
-[; ;Tomcat_V_driver.h: 149: unsigned int analogRead(char channel);
+[; ;Tomcat_V_driver.h: 103: long int freg_acc_z = 5375;
+[; ;Tomcat_V_driver.h: 136: void Thruster_Driver(int input, char thruster);
+[; ;Tomcat_V_driver.h: 137: void Tomcat_Setup();
+[; ;Tomcat_V_driver.h: 138: int Tomcat_Heading();
+[; ;Tomcat_V_driver.h: 139: int Tomcat_Pitch();
+[; ;Tomcat_V_driver.h: 140: int Tomcat_Roll();
+[; ;Tomcat_V_driver.h: 141: int Tomcat_Depth();
+[; ;Tomcat_V_driver.h: 142: int Tomcat_Press_Int();
+[; ;Tomcat_V_driver.h: 143: int Tomcat_Temp();
+[; ;Tomcat_V_driver.h: 144: int Tomcat_Temp_Ex();
+[; ;Tomcat_V_driver.h: 145: void Tomcat_Claw(int grip,int wrist);
+[; ;Tomcat_V_driver.h: 146: void Tomcat_TX_data(char tx_buff[], char num_bytes);
+[; ;Tomcat_V_driver.h: 147: void Tomcat_TX_warn(char code);
+[; ;Tomcat_V_driver.h: 148: void Tomcat_TX_error(char code);
+[; ;Tomcat_V_driver.h: 149: void Tomcat_Camera(int pan,int tilt);
+[; ;Tomcat_V_driver.h: 150: unsigned int analogRead(char channel);
 "7 Tomcat_V_driver.c
 [v _Tomcat_Setup `(v ~T0 @X0 1 ef ]
 {
@@ -8071,817 +8084,840 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Tomcat_V_driver.c: 17: PIE1 = 0b00100001;
 "17
 [e = _PIE1 -> -> 33 `i `uc ]
-[; ;Tomcat_V_driver.c: 19: TRISA = 0b11101111;
-"19
-[e = _TRISA -> -> 239 `i `uc ]
-[; ;Tomcat_V_driver.c: 20: ANSELA = 0b00101111;
+[; ;Tomcat_V_driver.c: 18: PIE2bits.OSCFIE = 1;
+"18
+[e = . . _PIE2bits 0 7 -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 20: TRISA = 0b11101111;
 "20
-[e = _ANSELA -> -> 47 `i `uc ]
-[; ;Tomcat_V_driver.c: 21: PORTA = 0b00000000;
+[e = _TRISA -> -> 239 `i `uc ]
+[; ;Tomcat_V_driver.c: 21: ANSELA = 0b00101111;
 "21
+[e = _ANSELA -> -> 47 `i `uc ]
+[; ;Tomcat_V_driver.c: 22: PORTA = 0b00000000;
+"22
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 23: asm(" clrwdt");
-"23
-[; <"  clrwdt ;# ">
-[; ;Tomcat_V_driver.c: 24: TRISB = 0b00000110;
+[; ;Tomcat_V_driver.c: 24: asm(" clrwdt");
 "24
-[e = _TRISB -> -> 6 `i `uc ]
-[; ;Tomcat_V_driver.c: 25: ANSELB = 0b00000100;
+[; <"  clrwdt ;# ">
+[; ;Tomcat_V_driver.c: 25: TRISB = 0b00000110;
 "25
-[e = _ANSELB -> -> 4 `i `uc ]
-[; ;Tomcat_V_driver.c: 26: PORTB = 0b00000000;
+[e = _TRISB -> -> 6 `i `uc ]
+[; ;Tomcat_V_driver.c: 26: ANSELB = 0b00000100;
 "26
+[e = _ANSELB -> -> 4 `i `uc ]
+[; ;Tomcat_V_driver.c: 27: PORTB = 0b00000000;
+"27
 [e = _PORTB -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 28: TRISC = 0b10010000;
-"28
-[e = _TRISC -> -> 144 `i `uc ]
-[; ;Tomcat_V_driver.c: 29: ANSELC = 0b00000000;
+[; ;Tomcat_V_driver.c: 29: TRISC = 0b10010000;
 "29
-[e = _ANSELC -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 30: PORTC = 0b00000000;
+[e = _TRISC -> -> 144 `i `uc ]
+[; ;Tomcat_V_driver.c: 30: ANSELC = 0b00000000;
 "30
+[e = _ANSELC -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 31: PORTC = 0b00000000;
+"31
 [e = _PORTC -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 32: TRISD = 0b10110100;
-"32
-[e = _TRISD -> -> 180 `i `uc ]
-[; ;Tomcat_V_driver.c: 33: ANSELD = 0b00000000;
+[; ;Tomcat_V_driver.c: 33: TRISD = 0b10110100;
 "33
-[e = _ANSELD -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 34: PORTD = 0b00000000;
+[e = _TRISD -> -> 180 `i `uc ]
+[; ;Tomcat_V_driver.c: 34: ANSELD = 0b00000000;
 "34
+[e = _ANSELD -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 35: PORTD = 0b00000000;
+"35
 [e = _PORTD -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 36: TRISE = 0b11111000;
-"36
-[e = _TRISE -> -> 248 `i `uc ]
-[; ;Tomcat_V_driver.c: 37: ANSELE = 0b00000000;
+[; ;Tomcat_V_driver.c: 37: TRISE = 0b11111000;
 "37
-[e = _ANSELE -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 38: PORTE = 0b00000000;
+[e = _TRISE -> -> 248 `i `uc ]
+[; ;Tomcat_V_driver.c: 38: ANSELE = 0b00000000;
 "38
+[e = _ANSELE -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 39: PORTE = 0b00000000;
+"39
 [e = _PORTE -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 41: T0CON = 0b10000010;
-"41
-[e = _T0CON -> -> 130 `i `uc ]
-[; ;Tomcat_V_driver.c: 42: T1CON = 0b00010011;
+[; ;Tomcat_V_driver.c: 42: T0CON = 0b10000010;
 "42
+[e = _T0CON -> -> 130 `i `uc ]
+[; ;Tomcat_V_driver.c: 43: T1CON = 0b00010011;
+"43
 [e = _T1CON -> -> 19 `i `uc ]
-[; ;Tomcat_V_driver.c: 44: T2CON = 0b00000110;
-"44
-[e = _T2CON -> -> 6 `i `uc ]
-[; ;Tomcat_V_driver.c: 45: T4CON = 0b00000110;
+[; ;Tomcat_V_driver.c: 45: T2CON = 0b00000110;
 "45
+[e = _T2CON -> -> 6 `i `uc ]
+[; ;Tomcat_V_driver.c: 46: T4CON = 0b00000110;
+"46
 [e = _T4CON -> -> 6 `i `uc ]
-[; ;Tomcat_V_driver.c: 48: CCP1CON = 0b00001100;
-"48
-[e = _CCP1CON -> -> 12 `i `uc ]
-[; ;Tomcat_V_driver.c: 49: CCP2CON = 0b00001100;
+[; ;Tomcat_V_driver.c: 49: CCP1CON = 0b00001100;
 "49
-[e = _CCP2CON -> -> 12 `i `uc ]
-[; ;Tomcat_V_driver.c: 50: CCP3CON = 0b00001100;
+[e = _CCP1CON -> -> 12 `i `uc ]
+[; ;Tomcat_V_driver.c: 50: CCP2CON = 0b00001100;
 "50
-[e = _CCP3CON -> -> 12 `i `uc ]
-[; ;Tomcat_V_driver.c: 51: CCP4CON = 0b00001111;
+[e = _CCP2CON -> -> 12 `i `uc ]
+[; ;Tomcat_V_driver.c: 51: CCP3CON = 0b00001100;
 "51
+[e = _CCP3CON -> -> 12 `i `uc ]
+[; ;Tomcat_V_driver.c: 52: CCP4CON = 0b00001111;
+"52
 [e = _CCP4CON -> -> 15 `i `uc ]
-[; ;Tomcat_V_driver.c: 53: ECCP1AS = 0;
-"53
-[e = _ECCP1AS -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 54: ECCP2AS = 0;
+[; ;Tomcat_V_driver.c: 54: ECCP1AS = 0;
 "54
-[e = _ECCP2AS -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 55: ECCP3AS = 0;
+[e = _ECCP1AS -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 55: ECCP2AS = 0;
 "55
+[e = _ECCP2AS -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 56: ECCP3AS = 0;
+"56
 [e = _ECCP3AS -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 58: PSTR1CON = 0b00000001;
-"58
-[e = _PSTR1CON -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 59: PSTR2CON = 0b00000001;
+[; ;Tomcat_V_driver.c: 59: PSTR1CON = 0b00000001;
 "59
-[e = _PSTR2CON -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 60: PSTR3CON = 0b00000001;
+[e = _PSTR1CON -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 60: PSTR2CON = 0b00000001;
 "60
-[e = _PSTR3CON -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 61: asm(" clrwdt");
+[e = _PSTR2CON -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 61: PSTR3CON = 0b00000001;
 "61
+[e = _PSTR3CON -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 62: asm(" clrwdt");
+"62
 [; <"  clrwdt ;# ">
-[; ;Tomcat_V_driver.c: 63: CCPTMRS0 = 0b00000001;
-"63
-[e = _CCPTMRS0 -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 64: CCPTMRS1 = 0b00001001;
+[; ;Tomcat_V_driver.c: 64: CCPTMRS0 = 0b00000001;
 "64
+[e = _CCPTMRS0 -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 65: CCPTMRS1 = 0b00001001;
+"65
 [e = _CCPTMRS1 -> -> 9 `i `uc ]
-[; ;Tomcat_V_driver.c: 66: SSP1CON1 &=0xDF;
-"66
-[e =& _SSP1CON1 -> -> 223 `i `uc ]
-[; ;Tomcat_V_driver.c: 67: OpenI2C1(0b00001000, 0b10000000);
+[; ;Tomcat_V_driver.c: 67: SSP1CON1 &=0xDF;
 "67
-[e ( _OpenI2C1 (2 , -> -> 8 `i `uc -> -> 128 `i `uc ]
-[; ;Tomcat_V_driver.c: 68: SSP1ADD = 49;
+[e =& _SSP1CON1 -> -> 223 `i `uc ]
+[; ;Tomcat_V_driver.c: 68: OpenI2C1(0b00001000, 0b10000000);
 "68
+[e ( _OpenI2C1 (2 , -> -> 8 `i `uc -> -> 128 `i `uc ]
+[; ;Tomcat_V_driver.c: 69: SSP1ADD = 49;
+"69
 [e = _SSP1ADD -> -> 49 `i `uc ]
-[; ;Tomcat_V_driver.c: 69: Open1USART(0b01111111 &
-[; ;Tomcat_V_driver.c: 70: 0b11111111 &
-[; ;Tomcat_V_driver.c: 71: 0b11111110 &
-[; ;Tomcat_V_driver.c: 72: 0b11111101 &
-[; ;Tomcat_V_driver.c: 73: 0b11111111 &
-[; ;Tomcat_V_driver.c: 74: 0b11111111, (unsigned char)(((float)20000000/(16.0*(float)9600))+1));
-"74
-[e ( _Open1USART (2 , -> & & & & & -> 127 `i -> 255 `i -> 254 `i -> 253 `i -> 255 `i -> 255 `i `uc -> -> + / -> -> -> 20000000 `l `f `d * .16.0 -> -> -> 9600 `i `f `d -> -> 1 `i `d `uc `ui ]
-[; ;Tomcat_V_driver.c: 75: asm(" clrwdt");
+[; ;Tomcat_V_driver.c: 70: Open1USART(0b01111111 &
+[; ;Tomcat_V_driver.c: 71: 0b11111111 &
+[; ;Tomcat_V_driver.c: 72: 0b11111110 &
+[; ;Tomcat_V_driver.c: 73: 0b11111101 &
+[; ;Tomcat_V_driver.c: 74: 0b11111111 &
+[; ;Tomcat_V_driver.c: 75: 0b11111111, (unsigned char)(((float)20000000/(16.0*(float)9600))+1));
 "75
+[e ( _Open1USART (2 , -> & & & & & -> 127 `i -> 255 `i -> 254 `i -> 253 `i -> 255 `i -> 255 `i `uc -> -> + / -> -> -> 20000000 `l `f `d * .16.0 -> -> -> 9600 `i `f `d -> -> 1 `i `d `uc `ui ]
+[; ;Tomcat_V_driver.c: 76: asm(" clrwdt");
+"76
 [; <"  clrwdt ;# ">
-[; ;Tomcat_V_driver.c: 89: }
-"89
+[; ;Tomcat_V_driver.c: 90: }
+"90
 [e :UE 1150 ]
 }
-"91
+"92
 [v _Thruster_Driver `(v ~T0 @X0 1 ef2`i`uc ]
 {
-[; ;Tomcat_V_driver.c: 91: void Thruster_Driver(int input, char thruster) {
+[; ;Tomcat_V_driver.c: 92: void Thruster_Driver(int input, char thruster) {
 [e :U _Thruster_Driver ]
 [v _input `i ~T0 @X0 1 r1 ]
 [v _thruster `uc ~T0 @X0 1 r2 ]
 [f ]
-"92
-[v _dir `uc ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 92: char dir = 0;
-[e = _dir -> -> 0 `i `uc ]
 "93
-[v _dc `i ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 93: int dc = 0;
-[e = _dc -> 0 `i ]
-[; ;Tomcat_V_driver.c: 94: if (input > 134)
-"94
-[e $ ! > _input -> 134 `i 1152  ]
-[; ;Tomcat_V_driver.c: 95: {
-"95
-{
-[; ;Tomcat_V_driver.c: 96: dir = 1;
-"96
-[e = _dir -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 97: dc = 256 * ((input - 127) / 126.0);
-"97
-[e = _dc -> * -> -> 256 `i `d / -> - _input -> 127 `i `d .126.0 `i ]
-"98
-}
-[; ;Tomcat_V_driver.c: 98: }
-[e $U 1153  ]
-"99
-[e :U 1152 ]
-[; ;Tomcat_V_driver.c: 99: else if (input < 120)
-[e $ ! < _input -> 120 `i 1154  ]
-[; ;Tomcat_V_driver.c: 100: {
-"100
-{
-[; ;Tomcat_V_driver.c: 101: dir = 0;
-"101
+[v _dir `uc ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 93: char dir = 0;
 [e = _dir -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 102: dc = 256 * ((126 - input) / 126.0);
-"102
-[e = _dc -> * -> -> 256 `i `d / -> - -> 126 `i _input `d .126.0 `i ]
-"103
-}
-[; ;Tomcat_V_driver.c: 103: }
-[e $U 1155  ]
-"104
-[e :U 1154 ]
-[; ;Tomcat_V_driver.c: 104: else
-[; ;Tomcat_V_driver.c: 105: {
-"105
-{
-[; ;Tomcat_V_driver.c: 106: dc=0;
-"106
+"94
+[v _dc `i ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 94: int dc = 0;
 [e = _dc -> 0 `i ]
+[; ;Tomcat_V_driver.c: 95: if (input > 134)
+"95
+[e $ ! > _input -> 134 `i 1152  ]
+[; ;Tomcat_V_driver.c: 96: {
+"96
+{
+[; ;Tomcat_V_driver.c: 97: dir = 1;
+"97
+[e = _dir -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 98: dc = 256 * ((input - 127) / 126.0);
+"98
+[e = _dc -> * -> -> 256 `i `d / -> - _input -> 127 `i `d .126.0 `i ]
+"99
+}
+[; ;Tomcat_V_driver.c: 99: }
+[e $U 1153  ]
+"100
+[e :U 1152 ]
+[; ;Tomcat_V_driver.c: 100: else if (input < 120)
+[e $ ! < _input -> 120 `i 1154  ]
+[; ;Tomcat_V_driver.c: 101: {
+"101
+{
+[; ;Tomcat_V_driver.c: 102: dir = 0;
+"102
+[e = _dir -> -> 0 `i `uc ]
+[; ;Tomcat_V_driver.c: 103: dc = 256 * ((126 - input) / 126.0);
+"103
+[e = _dc -> * -> -> 256 `i `d / -> - -> 126 `i _input `d .126.0 `i ]
+"104
+}
+[; ;Tomcat_V_driver.c: 104: }
+[e $U 1155  ]
+"105
+[e :U 1154 ]
+[; ;Tomcat_V_driver.c: 105: else
+[; ;Tomcat_V_driver.c: 106: {
+"106
+{
+[; ;Tomcat_V_driver.c: 107: dc=0;
 "107
+[e = _dc -> 0 `i ]
+"108
 }
 [e :U 1155 ]
 [e :U 1153 ]
-[; ;Tomcat_V_driver.c: 107: }
-[; ;Tomcat_V_driver.c: 109: switch (thruster) {
-"109
+[; ;Tomcat_V_driver.c: 108: }
+[; ;Tomcat_V_driver.c: 110: switch (thruster) {
+"110
 [e $U 1157  ]
 {
-[; ;Tomcat_V_driver.c: 110: case 1:
-"110
-[e :U 1158 ]
-[; ;Tomcat_V_driver.c: 111: LATBbits.LATB3 = dir;
+[; ;Tomcat_V_driver.c: 111: case 1:
 "111
-[e = . . _LATBbits 0 3 _dir ]
-[; ;Tomcat_V_driver.c: 112: SetDCEPWM1(dc);
+[e :U 1158 ]
+[; ;Tomcat_V_driver.c: 112: LATBbits.LATB3 = dir;
 "112
+[e = . . _LATBbits 0 3 _dir ]
+[; ;Tomcat_V_driver.c: 113: SetDCEPWM1(dc);
+"113
 [e ( _SetDCEPWM1 (1 -> _dc `ui ]
-[; ;Tomcat_V_driver.c: 114: break;
-"114
-[e $U 1156  ]
-[; ;Tomcat_V_driver.c: 115: case 2:
+[; ;Tomcat_V_driver.c: 115: break;
 "115
-[e :U 1159 ]
-[; ;Tomcat_V_driver.c: 116: LATBbits.LATB4 = dir;
+[e $U 1156  ]
+[; ;Tomcat_V_driver.c: 116: case 2:
 "116
-[e = . . _LATBbits 0 4 _dir ]
-[; ;Tomcat_V_driver.c: 117: SetDCEPWM2(dc);
+[e :U 1159 ]
+[; ;Tomcat_V_driver.c: 117: LATBbits.LATB4 = dir;
 "117
-[e ( _SetDCEPWM2 (1 -> _dc `ui ]
-[; ;Tomcat_V_driver.c: 118: break;
+[e = . . _LATBbits 0 4 _dir ]
+[; ;Tomcat_V_driver.c: 118: SetDCEPWM2(dc);
 "118
-[e $U 1156  ]
-[; ;Tomcat_V_driver.c: 119: case 3:
+[e ( _SetDCEPWM2 (1 -> _dc `ui ]
+[; ;Tomcat_V_driver.c: 119: break;
 "119
-[e :U 1160 ]
-[; ;Tomcat_V_driver.c: 120: LATBbits.LATB6 = dir;
+[e $U 1156  ]
+[; ;Tomcat_V_driver.c: 120: case 3:
 "120
-[e = . . _LATBbits 0 6 _dir ]
-[; ;Tomcat_V_driver.c: 121: SetDCEPWM3(dc);
+[e :U 1160 ]
+[; ;Tomcat_V_driver.c: 121: LATBbits.LATB6 = dir;
 "121
-[e ( _SetDCEPWM3 (1 -> _dc `ui ]
-[; ;Tomcat_V_driver.c: 122: break;
+[e = . . _LATBbits 0 6 _dir ]
+[; ;Tomcat_V_driver.c: 122: SetDCEPWM3(dc);
 "122
-[e $U 1156  ]
-[; ;Tomcat_V_driver.c: 123: case 4:
+[e ( _SetDCEPWM3 (1 -> _dc `ui ]
+[; ;Tomcat_V_driver.c: 123: break;
 "123
-[e :U 1161 ]
-[; ;Tomcat_V_driver.c: 124: LATDbits.LATD0 = dir;
+[e $U 1156  ]
+[; ;Tomcat_V_driver.c: 124: case 4:
 "124
-[e = . . _LATDbits 0 0 _dir ]
-[; ;Tomcat_V_driver.c: 125: SetDCPWM4(dc);
+[e :U 1161 ]
+[; ;Tomcat_V_driver.c: 125: LATDbits.LATD0 = dir;
 "125
-[e ( _SetDCPWM4 (1 -> _dc `ui ]
-[; ;Tomcat_V_driver.c: 126: break;
+[e = . . _LATDbits 0 0 _dir ]
+[; ;Tomcat_V_driver.c: 126: SetDCPWM4(dc);
 "126
-[e $U 1156  ]
+[e ( _SetDCPWM4 (1 -> _dc `ui ]
+[; ;Tomcat_V_driver.c: 127: break;
 "127
-}
-[; ;Tomcat_V_driver.c: 127: }
 [e $U 1156  ]
-"109
+"128
+}
+[; ;Tomcat_V_driver.c: 128: }
+[e $U 1156  ]
+"110
 [e :U 1157 ]
 [e [\ _thruster , $ -> -> 1 `i `uc 1158
  , $ -> -> 2 `i `uc 1159
  , $ -> -> 3 `i `uc 1160
  , $ -> -> 4 `i `uc 1161
  1156 ]
-"127
-[e :U 1156 ]
-[; ;Tomcat_V_driver.c: 128: }
 "128
+[e :U 1156 ]
+[; ;Tomcat_V_driver.c: 129: }
+"129
 [e :UE 1151 ]
 }
-"130
+"131
 [v _Tomcat_Heading `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 130: int Tomcat_Heading() {
+[; ;Tomcat_V_driver.c: 131: int Tomcat_Heading() {
 [e :U _Tomcat_Heading ]
 [f ]
-"131
-[v _hdg `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 131: float hdg = 0.0;
-[e = _hdg -> .0.0 `f ]
 "132
-[v _temp `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 132: float temp = 0;
-[e = _temp -> -> 0 `i `f ]
-[; ;Tomcat_V_driver.c: 133: readLSM9_mag(mag);
+[v _hdg `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 132: float hdg = 0.0;
+[e = _hdg -> .0.0 `f ]
 "133
+[v _temp `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 133: float temp = 0;
+[e = _temp -> -> 0 `i `f ]
+[; ;Tomcat_V_driver.c: 134: readLSM9_mag(mag);
+"134
 [e ( _readLSM9_mag (1 -> &U _mag `*ui ]
-[; ;Tomcat_V_driver.c: 136: freg_mag_x = freg_mag_x - (freg_mag_x >> 2) + mag[0];
-"136
-[e = _freg_mag_x + - _freg_mag_x >> _freg_mag_x -> 2 `i -> *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 137: freg_mag_y = freg_mag_y - (freg_mag_y >> 2) + mag[1];
+[; ;Tomcat_V_driver.c: 137: freg_mag_x = freg_mag_x - (freg_mag_x >> 2) + mag[0];
 "137
-[e = _freg_mag_y + - _freg_mag_y >> _freg_mag_y -> 2 `i -> *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 138: freg_mag_z = freg_mag_z - (freg_mag_z >> 2) + mag[2];
+[e = _freg_mag_x + - _freg_mag_x >> _freg_mag_x -> 2 `i -> *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 138: freg_mag_y = freg_mag_y - (freg_mag_y >> 2) + mag[1];
 "138
+[e = _freg_mag_y + - _freg_mag_y >> _freg_mag_y -> 2 `i -> *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 139: freg_mag_z = freg_mag_z - (freg_mag_z >> 2) + mag[2];
+"139
 [e = _freg_mag_z + - _freg_mag_z >> _freg_mag_z -> 2 `i -> *U + &U _mag * -> -> -> 2 `i `ui `ux -> -> # *U &U _mag `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 140: mag[0] = freg_mag_x >> 2;
-"140
-[e = *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux -> >> _freg_mag_x -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 141: mag[1] = freg_mag_y >> 2;
+[; ;Tomcat_V_driver.c: 141: mag[0] = freg_mag_x >> 2;
 "141
-[e = *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux -> >> _freg_mag_y -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 142: mag[2] = freg_mag_z >> 2;
+[e = *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux -> >> _freg_mag_x -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 142: mag[1] = freg_mag_y >> 2;
 "142
+[e = *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux -> >> _freg_mag_y -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 143: mag[2] = freg_mag_z >> 2;
+"143
 [e = *U + &U _mag * -> -> -> 2 `i `ui `ux -> -> # *U &U _mag `ui `ux -> >> _freg_mag_z -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 146: if (mag[0] > 0 && mag[1] > 0) {
-"146
+[; ;Tomcat_V_driver.c: 147: if (mag[0] > 0 && mag[1] > 0) {
+"147
 [e $ ! && > *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux -> 0 `i > *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux -> 0 `i 1163  ]
 {
-[; ;Tomcat_V_driver.c: 147: temp = (float) mag[0] / (float) mag[1];
-"147
+[; ;Tomcat_V_driver.c: 148: temp = (float) mag[0] / (float) mag[1];
+"148
 [e = _temp / -> *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux `f -> *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux `f ]
-[; ;Tomcat_V_driver.c: 149: hdg = 90 - 180.0 * atan(temp) / 3.14159265358979323846;
-"149
+[; ;Tomcat_V_driver.c: 150: hdg = 90 - 180.0 * atan(temp) / 3.14159265358979323846;
+"150
 [e = _hdg -> - -> -> 90 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
-"151
+"152
 }
-[; ;Tomcat_V_driver.c: 151: } else if (mag[0] < 0 && mag[1] > 0) {
+[; ;Tomcat_V_driver.c: 152: } else if (mag[0] < 0 && mag[1] > 0) {
 [e $U 1164  ]
 [e :U 1163 ]
 [e $ ! && < *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux -> 0 `i > *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux -> 0 `i 1165  ]
 {
-[; ;Tomcat_V_driver.c: 152: temp = (float) mag[1] / (float) mag[0];
-"152
+[; ;Tomcat_V_driver.c: 153: temp = (float) mag[1] / (float) mag[0];
+"153
 [e = _temp / -> *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux `f -> *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux `f ]
-[; ;Tomcat_V_driver.c: 154: hdg = 180 + 180.0 * atan(temp) / 3.14159265358979323846;
-"154
+[; ;Tomcat_V_driver.c: 155: hdg = 180 + 180.0 * atan(temp) / 3.14159265358979323846;
+"155
 [e = _hdg -> + -> -> 180 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
-"157
+"158
 }
-[; ;Tomcat_V_driver.c: 157: } else {
+[; ;Tomcat_V_driver.c: 158: } else {
 [e $U 1166  ]
 [e :U 1165 ]
 {
-[; ;Tomcat_V_driver.c: 158: temp = (float) mag[0] / (float) mag[1];
-"158
+[; ;Tomcat_V_driver.c: 159: temp = (float) mag[0] / (float) mag[1];
+"159
 [e = _temp / -> *U + &U _mag * -> -> -> 0 `i `ui `ux -> -> # *U &U _mag `ui `ux `f -> *U + &U _mag * -> -> -> 1 `i `ui `ux -> -> # *U &U _mag `ui `ux `f ]
-[; ;Tomcat_V_driver.c: 160: hdg = 270 - 180.0 * atan(temp) / 3.14159265358979323846;
-"160
-[e = _hdg -> - -> -> 270 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
+[; ;Tomcat_V_driver.c: 161: hdg = 270 - 180.0 * atan(temp) / 3.14159265358979323846;
 "161
+[e = _hdg -> - -> -> 270 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
+"162
 }
 [e :U 1166 ]
 [e :U 1164 ]
-[; ;Tomcat_V_driver.c: 161: }
-[; ;Tomcat_V_driver.c: 162: return hdg;
-"162
+[; ;Tomcat_V_driver.c: 162: }
+[; ;Tomcat_V_driver.c: 163: return hdg;
+"163
 [e ) -> _hdg `i ]
 [e $UE 1162  ]
-[; ;Tomcat_V_driver.c: 163: }
-"163
+[; ;Tomcat_V_driver.c: 164: }
+"164
 [e :UE 1162 ]
 }
-"165
+"166
 [v _Tomcat_Pitch `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 165: int Tomcat_Pitch() {
+[; ;Tomcat_V_driver.c: 166: int Tomcat_Pitch() {
 [e :U _Tomcat_Pitch ]
 [f ]
-"166
-[v _pitch `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 166: float pitch = 0.0;
-[e = _pitch -> .0.0 `f ]
 "167
-[v _temp `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 167: float temp = 0;
-[e = _temp -> -> 0 `i `f ]
-[; ;Tomcat_V_driver.c: 168: readLSM9_accel(accel);
+[v _pitch `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 167: float pitch = 0.0;
+[e = _pitch -> .0.0 `f ]
 "168
+[v _temp `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 168: float temp = 0;
+[e = _temp -> -> 0 `i `f ]
+[; ;Tomcat_V_driver.c: 169: readLSM9_accel(accel);
+"169
 [e ( _readLSM9_accel (1 -> &U _accel `*ui ]
-[; ;Tomcat_V_driver.c: 171: freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
-"171
-[e = _freg_acc_x + - _freg_acc_x >> _freg_acc_x -> 2 `i -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 172: freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
+[; ;Tomcat_V_driver.c: 172: freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
 "172
-[e = _freg_acc_y + - _freg_acc_y >> _freg_acc_y -> 2 `i -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 173: freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+[e = _freg_acc_x + - _freg_acc_x >> _freg_acc_x -> 2 `i -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 173: freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
 "173
+[e = _freg_acc_y + - _freg_acc_y >> _freg_acc_y -> 2 `i -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 174: freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+"174
 [e = _freg_acc_z + - _freg_acc_z >> _freg_acc_z -> 2 `i -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 175: accel[0] = freg_acc_x >> 2;
-"175
-[e = *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_x -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 176: accel[1] = freg_acc_y >> 2;
+[; ;Tomcat_V_driver.c: 176: accel[0] = freg_acc_x >> 2;
 "176
-[e = *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_y -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 177: accel[2] = freg_acc_z >> 2;
+[e = *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_x -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 177: accel[1] = freg_acc_y >> 2;
 "177
+[e = *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_y -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 178: accel[2] = freg_acc_z >> 2;
+"178
 [e = *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_z -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 180: temp = (float) accel[0] / (float) accel[2];
-"180
-[e = _temp / -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `f -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `f ]
-[; ;Tomcat_V_driver.c: 181: pitch = 3 + 180.0 * atan(temp) / 3.14159265358979323846;
+[; ;Tomcat_V_driver.c: 181: temp = (float) accel[0] / (float) accel[2];
 "181
+[e = _temp / -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `f -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `f ]
+[; ;Tomcat_V_driver.c: 182: pitch = 3 + 180.0 * atan(temp) / 3.14159265358979323846;
+"182
 [e = _pitch -> + -> -> 3 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
-[; ;Tomcat_V_driver.c: 183: return pitch;
-"183
+[; ;Tomcat_V_driver.c: 184: return pitch;
+"184
 [e ) -> _pitch `i ]
 [e $UE 1167  ]
-[; ;Tomcat_V_driver.c: 184: }
-"184
+[; ;Tomcat_V_driver.c: 185: }
+"185
 [e :UE 1167 ]
 }
-"186
+"187
 [v _Tomcat_Roll `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 186: int Tomcat_Roll() {
+[; ;Tomcat_V_driver.c: 187: int Tomcat_Roll() {
 [e :U _Tomcat_Roll ]
 [f ]
-"187
-[v _roll `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 187: float roll = 0.0;
-[e = _roll -> .0.0 `f ]
 "188
-[v _temp `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 188: float temp = 0;
-[e = _temp -> -> 0 `i `f ]
-[; ;Tomcat_V_driver.c: 189: readLSM9_accel(accel);
+[v _roll `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 188: float roll = 0.0;
+[e = _roll -> .0.0 `f ]
 "189
+[v _temp `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 189: float temp = 0;
+[e = _temp -> -> 0 `i `f ]
+[; ;Tomcat_V_driver.c: 190: readLSM9_accel(accel);
+"190
 [e ( _readLSM9_accel (1 -> &U _accel `*ui ]
-[; ;Tomcat_V_driver.c: 192: freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
-"192
-[e = _freg_acc_x + - _freg_acc_x >> _freg_acc_x -> 2 `i -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 193: freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
+[; ;Tomcat_V_driver.c: 193: freg_acc_x = freg_acc_x - (freg_acc_x >> 2) + accel[0];
 "193
-[e = _freg_acc_y + - _freg_acc_y >> _freg_acc_y -> 2 `i -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 194: freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+[e = _freg_acc_x + - _freg_acc_x >> _freg_acc_x -> 2 `i -> *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 194: freg_acc_y = freg_acc_y - (freg_acc_y >> 2) + accel[1];
 "194
+[e = _freg_acc_y + - _freg_acc_y >> _freg_acc_y -> 2 `i -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
+[; ;Tomcat_V_driver.c: 195: freg_acc_z = freg_acc_z - (freg_acc_z >> 2) + accel[2];
+"195
 [e = _freg_acc_z + - _freg_acc_z >> _freg_acc_z -> 2 `i -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `l ]
-[; ;Tomcat_V_driver.c: 196: accel[0] = freg_acc_x >> 2;
-"196
-[e = *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_x -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 197: accel[1] = freg_acc_y >> 2;
+[; ;Tomcat_V_driver.c: 197: accel[0] = freg_acc_x >> 2;
 "197
-[e = *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_y -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 198: accel[2] = freg_acc_z >> 2;
+[e = *U + &U _accel * -> -> -> 0 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_x -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 198: accel[1] = freg_acc_y >> 2;
 "198
+[e = *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_y -> 2 `i `i ]
+[; ;Tomcat_V_driver.c: 199: accel[2] = freg_acc_z >> 2;
+"199
 [e = *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux -> >> _freg_acc_z -> 2 `i `i ]
-[; ;Tomcat_V_driver.c: 201: temp = (float) accel[1] / (float) accel[2];
-"201
-[e = _temp / -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `f -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `f ]
-[; ;Tomcat_V_driver.c: 202: roll = 13 + 180.0 * atan(temp) / 3.14159265358979323846;
+[; ;Tomcat_V_driver.c: 202: temp = (float) accel[1] / (float) accel[2];
 "202
+[e = _temp / -> *U + &U _accel * -> -> -> 1 `i `ui `ux -> -> # *U &U _accel `ui `ux `f -> *U + &U _accel * -> -> -> 2 `i `ui `ux -> -> # *U &U _accel `ui `ux `f ]
+[; ;Tomcat_V_driver.c: 203: roll = 13 + 180.0 * atan(temp) / 3.14159265358979323846;
+"203
 [e = _roll -> + -> -> 13 `i `d / * .180.0 ( _atan (1 -> _temp `d .3.14159265358979323846 `f ]
-[; ;Tomcat_V_driver.c: 204: return roll;
-"204
+[; ;Tomcat_V_driver.c: 205: return roll;
+"205
 [e ) -> _roll `i ]
 [e $UE 1168  ]
-[; ;Tomcat_V_driver.c: 205: }
-"205
+[; ;Tomcat_V_driver.c: 206: }
+"206
 [e :UE 1168 ]
 }
-"207
+"208
 [v _Tomcat_Depth `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 207: int Tomcat_Depth() {
+[; ;Tomcat_V_driver.c: 208: int Tomcat_Depth() {
 [e :U _Tomcat_Depth ]
 [f ]
-"208
-[v _tempPress `f ~T0 @X0 1 a ]
 "209
-[v _depth `i ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 208: float tempPress;
-[; ;Tomcat_V_driver.c: 209: int depth;
-[; ;Tomcat_V_driver.c: 210: tempPress = analogRead(3);
+[v _tempPress `f ~T0 @X0 1 a ]
 "210
-[e = _tempPress -> ( _analogRead (1 -> -> 3 `i `uc `f ]
-[; ;Tomcat_V_driver.c: 211: tempPress = tempPress - (1024.0 / 5.0);
+[v _depth `i ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 209: float tempPress;
+[; ;Tomcat_V_driver.c: 210: int depth;
+[; ;Tomcat_V_driver.c: 211: tempPress = analogRead(3);
 "211
-[e = _tempPress -> - -> _tempPress `d / .1024.0 .5.0 `f ]
-[; ;Tomcat_V_driver.c: 212: tempPress = tempPress * 500.0 / 820.0;
+[e = _tempPress -> ( _analogRead (1 -> -> 3 `i `uc `f ]
+[; ;Tomcat_V_driver.c: 212: tempPress = tempPress - (1024.0 / 5.0);
 "212
-[e = _tempPress -> / * -> _tempPress `d .500.0 .820.0 `f ]
-[; ;Tomcat_V_driver.c: 213: depth = (int) (tempPress * 2.31);
+[e = _tempPress -> - -> _tempPress `d / .1024.0 .5.0 `f ]
+[; ;Tomcat_V_driver.c: 213: tempPress = tempPress * 500.0 / 820.0;
 "213
-[e = _depth -> * -> _tempPress `d .2.31 `i ]
-[; ;Tomcat_V_driver.c: 214: return depth;
+[e = _tempPress -> / * -> _tempPress `d .500.0 .820.0 `f ]
+[; ;Tomcat_V_driver.c: 214: depth = (int) (tempPress * 2.31);
 "214
+[e = _depth -> * -> _tempPress `d .2.31 `i ]
+[; ;Tomcat_V_driver.c: 215: return depth;
+"215
 [e ) _depth ]
 [e $UE 1169  ]
-[; ;Tomcat_V_driver.c: 216: }
-"216
+[; ;Tomcat_V_driver.c: 217: }
+"217
 [e :UE 1169 ]
 }
-"218
+"219
 [v _Tomcat_Press_Int `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 218: int Tomcat_Press_Int() {
+[; ;Tomcat_V_driver.c: 219: int Tomcat_Press_Int() {
 [e :U _Tomcat_Press_Int ]
 [f ]
-"219
-[v _press `i ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 219: int press = 0;
-[e = _press -> 0 `i ]
-[; ;Tomcat_V_driver.c: 220: press = (analogRead(2) - 41) / 922 * 101.5;
 "220
-[e = _press -> * -> / - ( _analogRead (1 -> -> 2 `i `uc -> -> 41 `i `ui -> -> 922 `i `ui `d .101.5 `i ]
-[; ;Tomcat_V_driver.c: 221: return press;
+[v _press `i ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 220: int press = 0;
+[e = _press -> 0 `i ]
 "221
+[v _temp `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 221: float temp = 0.0;
+[e = _temp -> .0.0 `f ]
+[; ;Tomcat_V_driver.c: 222: temp = analogRead(2)*0.0048 * 0.2;
+"222
+[e = _temp -> * * -> ( _analogRead (1 -> -> 2 `i `uc `d .0.0048 .0.2 `f ]
+[; ;Tomcat_V_driver.c: 223: temp = temp - 0.04;
+"223
+[e = _temp -> - -> _temp `d .0.04 `f ]
+[; ;Tomcat_V_driver.c: 224: temp = temp * 777.7;
+"224
+[e = _temp -> * -> _temp `d .777.7 `f ]
+[; ;Tomcat_V_driver.c: 225: press = (int)temp;
+"225
+[e = _press -> _temp `i ]
+[; ;Tomcat_V_driver.c: 226: return press;
+"226
 [e ) _press ]
 [e $UE 1170  ]
-[; ;Tomcat_V_driver.c: 222: }
-"222
+[; ;Tomcat_V_driver.c: 227: }
+"227
 [e :UE 1170 ]
 }
-"224
+"229
 [v _Tomcat_Temp `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 224: int Tomcat_Temp() {
+[; ;Tomcat_V_driver.c: 229: int Tomcat_Temp() {
 [e :U _Tomcat_Temp ]
 [f ]
-"225
+"230
 [v _temp `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 225: float temp = 0.0;
+[; ;Tomcat_V_driver.c: 230: float temp = 0.0;
 [e = _temp -> .0.0 `f ]
-[; ;Tomcat_V_driver.c: 226: temp = analogRead(8);
-"226
+[; ;Tomcat_V_driver.c: 231: temp = analogRead(8);
+"231
 [e = _temp -> ( _analogRead (1 -> -> 8 `i `uc `f ]
-[; ;Tomcat_V_driver.c: 227: temp = (temp / 1024.0) * 500.0;
-"227
+[; ;Tomcat_V_driver.c: 232: temp = (temp / 1024.0) * 500.0;
+"232
 [e = _temp -> * / -> _temp `d .1024.0 .500.0 `f ]
-[; ;Tomcat_V_driver.c: 228: return (int)temp;
-"228
+[; ;Tomcat_V_driver.c: 233: return (int)temp;
+"233
 [e ) -> _temp `i ]
 [e $UE 1171  ]
-[; ;Tomcat_V_driver.c: 229: }
-"229
+[; ;Tomcat_V_driver.c: 234: }
+"234
 [e :UE 1171 ]
 }
-"231
+"236
 [v _Tomcat_Temp_Ex `(i ~T0 @X0 1 ef ]
 {
-[; ;Tomcat_V_driver.c: 231: int Tomcat_Temp_Ex() {
+[; ;Tomcat_V_driver.c: 236: int Tomcat_Temp_Ex() {
 [e :U _Tomcat_Temp_Ex ]
 [f ]
-"234
-[v _temp `f ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 234: float temp = 0.0;
-[e = _temp -> .0.0 `f ]
-[; ;Tomcat_V_driver.c: 235: temp = analogRead(22);
-"235
-[e = _temp -> ( _analogRead (1 -> -> 22 `i `uc `f ]
-[; ;Tomcat_V_driver.c: 236: temp = (temp / 1024.0) * 5.0;
-"236
-[e = _temp -> * / -> _temp `d .1024.0 .5.0 `f ]
-[; ;Tomcat_V_driver.c: 237: temp = (10000 * 5.0 / temp) - 10000;
-"237
-[e = _temp -> - / * -> -> 10000 `i `d .5.0 -> _temp `d -> -> 10000 `i `d `f ]
-[; ;Tomcat_V_driver.c: 238: temp = 229.23 - 22.009493 * log(temp);
-"238
-[e = _temp -> - .229.23 * .22.009493 ( _log (1 -> _temp `d `f ]
-[; ;Tomcat_V_driver.c: 239: return temp;
 "239
+[v _temp `f ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 239: float temp = 0.0;
+[e = _temp -> .0.0 `f ]
+[; ;Tomcat_V_driver.c: 240: temp = analogRead(22);
+"240
+[e = _temp -> ( _analogRead (1 -> -> 22 `i `uc `f ]
+[; ;Tomcat_V_driver.c: 241: temp = (temp / 1024.0) * 5.0;
+"241
+[e = _temp -> * / -> _temp `d .1024.0 .5.0 `f ]
+[; ;Tomcat_V_driver.c: 242: temp = (10000 * 5.0 / temp) - 10000;
+"242
+[e = _temp -> - / * -> -> 10000 `i `d .5.0 -> _temp `d -> -> 10000 `i `d `f ]
+[; ;Tomcat_V_driver.c: 243: temp = 229.23 - 22.009493 * log(temp);
+"243
+[e = _temp -> - .229.23 * .22.009493 ( _log (1 -> _temp `d `f ]
+[; ;Tomcat_V_driver.c: 244: return temp;
+"244
 [e ) -> _temp `i ]
 [e $UE 1172  ]
-[; ;Tomcat_V_driver.c: 240: }
-"240
+[; ;Tomcat_V_driver.c: 245: }
+"245
 [e :UE 1172 ]
 }
-"242
+"247
 [v _Tomcat_Claw `(v ~T0 @X0 1 ef2`i`i ]
 {
-[; ;Tomcat_V_driver.c: 242: void Tomcat_Claw(int grip, int wrist) {
+[; ;Tomcat_V_driver.c: 247: void Tomcat_Claw(int grip, int wrist) {
 [e :U _Tomcat_Claw ]
 [v _grip `i ~T0 @X0 1 r1 ]
 [v _wrist `i ~T0 @X0 1 r2 ]
 [f ]
-[; ;Tomcat_V_driver.c: 244: if (grip > 127)
-"244
+[; ;Tomcat_V_driver.c: 249: if (grip > 127)
+"249
 [e $ ! > _grip -> 127 `i 1174  ]
-[; ;Tomcat_V_driver.c: 245: LATEbits.LATE1 = 1;
-"245
+[; ;Tomcat_V_driver.c: 250: LATEbits.LATE1 = 1;
+"250
 [e = . . _LATEbits 0 1 -> -> 1 `i `uc ]
 [e $U 1175  ]
-"246
+"251
 [e :U 1174 ]
-[; ;Tomcat_V_driver.c: 246: else
-[; ;Tomcat_V_driver.c: 247: LATEbits.LATE1 = 0;
-"247
+[; ;Tomcat_V_driver.c: 251: else
+[; ;Tomcat_V_driver.c: 252: LATEbits.LATE1 = 0;
+"252
 [e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
 [e :U 1175 ]
-[; ;Tomcat_V_driver.c: 249: if (grip == 127)
-"249
+[; ;Tomcat_V_driver.c: 254: if (grip == 127)
+"254
 [e $ ! == _grip -> 127 `i 1176  ]
-[; ;Tomcat_V_driver.c: 250: LATEbits.LATE2 = 0;
-"250
+[; ;Tomcat_V_driver.c: 255: LATEbits.LATE2 = 0;
+"255
 [e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
 [e $U 1177  ]
-"251
+"256
 [e :U 1176 ]
-[; ;Tomcat_V_driver.c: 251: else
-[; ;Tomcat_V_driver.c: 252: LATEbits.LATE2 = 1;
-"252
+[; ;Tomcat_V_driver.c: 256: else
+[; ;Tomcat_V_driver.c: 257: LATEbits.LATE2 = 1;
+"257
 [e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
 [e :U 1177 ]
-[; ;Tomcat_V_driver.c: 254: if (wrist > 127)
-"254
+[; ;Tomcat_V_driver.c: 259: if (wrist > 127)
+"259
 [e $ ! > _wrist -> 127 `i 1178  ]
-[; ;Tomcat_V_driver.c: 255: LATBbits.LATB7 = 1;
-"255
+[; ;Tomcat_V_driver.c: 260: LATBbits.LATB7 = 1;
+"260
 [e = . . _LATBbits 0 7 -> -> 1 `i `uc ]
 [e $U 1179  ]
-"256
+"261
 [e :U 1178 ]
-[; ;Tomcat_V_driver.c: 256: else
-[; ;Tomcat_V_driver.c: 257: LATBbits.LATB7 = 0;
-"257
+[; ;Tomcat_V_driver.c: 261: else
+[; ;Tomcat_V_driver.c: 262: LATBbits.LATB7 = 0;
+"262
 [e = . . _LATBbits 0 7 -> -> 0 `i `uc ]
 [e :U 1179 ]
-[; ;Tomcat_V_driver.c: 259: if (wrist == 127)
-"259
+[; ;Tomcat_V_driver.c: 264: if (wrist == 127)
+"264
 [e $ ! == _wrist -> 127 `i 1180  ]
-[; ;Tomcat_V_driver.c: 260: LATCbits.LATC0 = 0;
-"260
+[; ;Tomcat_V_driver.c: 265: LATCbits.LATC0 = 0;
+"265
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 [e $U 1181  ]
-"261
+"266
 [e :U 1180 ]
-[; ;Tomcat_V_driver.c: 261: else
-[; ;Tomcat_V_driver.c: 262: LATCbits.LATC0 = 1;
-"262
+[; ;Tomcat_V_driver.c: 266: else
+[; ;Tomcat_V_driver.c: 267: LATCbits.LATC0 = 1;
+"267
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 [e :U 1181 ]
-[; ;Tomcat_V_driver.c: 265: }
-"265
+[; ;Tomcat_V_driver.c: 270: }
+"270
 [e :UE 1173 ]
 }
-"267
+"272
 [v _Tomcat_TX_data `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
-[; ;Tomcat_V_driver.c: 267: void Tomcat_TX_data(char tx_buff[], char num_bytes) {
+[; ;Tomcat_V_driver.c: 272: void Tomcat_TX_data(char tx_buff[], char num_bytes) {
 [e :U _Tomcat_TX_data ]
 [v _tx_buff `*uc ~T0 @X0 1 r1 ]
 [v _num_bytes `uc ~T0 @X0 1 r2 ]
 [f ]
-"268
+"273
 [v _k `uc ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 268: char k = 0;
+[; ;Tomcat_V_driver.c: 273: char k = 0;
 [e = _k -> -> 0 `i `uc ]
-[; ;Tomcat_V_driver.c: 269: while ((!TXSTA1bits.TRMT));
-"269
+[; ;Tomcat_V_driver.c: 274: while ((!TXSTA1bits.TRMT));
+"274
 [e $U 1183  ]
 [e :U 1184 ]
 [e :U 1183 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1184  ]
 [e :U 1185 ]
-[; ;Tomcat_V_driver.c: 270: Write1USART('$');
-"270
+[; ;Tomcat_V_driver.c: 275: Write1USART('$');
+"275
 [e ( _Write1USART (1 -> -> 36 `ui `uc ]
-[; ;Tomcat_V_driver.c: 272: for (k = 0; k < num_bytes; k++) {
-"272
+[; ;Tomcat_V_driver.c: 277: for (k = 0; k < num_bytes; k++) {
+"277
 {
 [e = _k -> -> 0 `i `uc ]
 [e $U 1189  ]
 [e :U 1186 ]
 {
-[; ;Tomcat_V_driver.c: 273: while ((!TXSTA1bits.TRMT));
-"273
+[; ;Tomcat_V_driver.c: 278: while ((!TXSTA1bits.TRMT));
+"278
 [e $U 1190  ]
 [e :U 1191 ]
 [e :U 1190 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1191  ]
 [e :U 1192 ]
-[; ;Tomcat_V_driver.c: 274: Write1USART(tx_buff[k]);
-"274
+[; ;Tomcat_V_driver.c: 279: Write1USART(tx_buff[k]);
+"279
 [e ( _Write1USART (1 *U + _tx_buff * -> _k `ux -> -> # *U _tx_buff `ui `ux ]
-"275
+"280
 }
-"272
+"277
 [e ++ _k -> -> 1 `i `uc ]
 [e :U 1189 ]
 [e $ < -> _k `i -> _num_bytes `i 1186  ]
 [e :U 1187 ]
-"275
+"280
 }
-[; ;Tomcat_V_driver.c: 275: }
-[; ;Tomcat_V_driver.c: 276: Write1USART('\n');
-"276
+[; ;Tomcat_V_driver.c: 280: }
+[; ;Tomcat_V_driver.c: 281: while ((!TXSTA1bits.TRMT));
+"281
+[e $U 1193  ]
+[e :U 1194 ]
+[e :U 1193 ]
+[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1194  ]
+[e :U 1195 ]
+[; ;Tomcat_V_driver.c: 282: Write1USART('\n');
+"282
 [e ( _Write1USART (1 -> -> 10 `ui `uc ]
-[; ;Tomcat_V_driver.c: 277: }
-"277
+[; ;Tomcat_V_driver.c: 283: }
+"283
 [e :UE 1182 ]
 }
-"279
+"285
 [v _Tomcat_TX_warn `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;Tomcat_V_driver.c: 279: void Tomcat_TX_warn(char code) {
+[; ;Tomcat_V_driver.c: 285: void Tomcat_TX_warn(char code) {
 [e :U _Tomcat_TX_warn ]
 [v _code `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;Tomcat_V_driver.c: 281: while ((!TXSTA1bits.TRMT));
-"281
-[e $U 1194  ]
-[e :U 1195 ]
-[e :U 1194 ]
-[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1195  ]
-[e :U 1196 ]
-[; ;Tomcat_V_driver.c: 282: Write1USART('$');
-"282
-[e ( _Write1USART (1 -> -> 36 `ui `uc ]
-[; ;Tomcat_V_driver.c: 283: while ((!TXSTA1bits.TRMT));
-"283
+[; ;Tomcat_V_driver.c: 287: while ((!TXSTA1bits.TRMT));
+"287
 [e $U 1197  ]
 [e :U 1198 ]
 [e :U 1197 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1198  ]
 [e :U 1199 ]
-[; ;Tomcat_V_driver.c: 284: Write1USART('?');
-"284
-[e ( _Write1USART (1 -> -> 63 `ui `uc ]
-[; ;Tomcat_V_driver.c: 285: while ((!TXSTA1bits.TRMT));
-"285
+[; ;Tomcat_V_driver.c: 288: Write1USART('$');
+"288
+[e ( _Write1USART (1 -> -> 36 `ui `uc ]
+[; ;Tomcat_V_driver.c: 289: while ((!TXSTA1bits.TRMT));
+"289
 [e $U 1200  ]
 [e :U 1201 ]
 [e :U 1200 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1201  ]
 [e :U 1202 ]
-[; ;Tomcat_V_driver.c: 286: Write1USART(code);
-"286
+[; ;Tomcat_V_driver.c: 290: Write1USART('?');
+"290
+[e ( _Write1USART (1 -> -> 63 `ui `uc ]
+[; ;Tomcat_V_driver.c: 291: while ((!TXSTA1bits.TRMT));
+"291
+[e $U 1203  ]
+[e :U 1204 ]
+[e :U 1203 ]
+[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1204  ]
+[e :U 1205 ]
+[; ;Tomcat_V_driver.c: 292: Write1USART(code);
+"292
 [e ( _Write1USART (1 _code ]
-[; ;Tomcat_V_driver.c: 287: }
-"287
-[e :UE 1193 ]
+[; ;Tomcat_V_driver.c: 293: }
+"293
+[e :UE 1196 ]
 }
-"289
+"295
 [v _Tomcat_TX_error `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;Tomcat_V_driver.c: 289: void Tomcat_TX_error(char code) {
+[; ;Tomcat_V_driver.c: 295: void Tomcat_TX_error(char code) {
 [e :U _Tomcat_TX_error ]
 [v _code `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;Tomcat_V_driver.c: 291: while ((!TXSTA1bits.TRMT));
-"291
-[e $U 1204  ]
-[e :U 1205 ]
-[e :U 1204 ]
-[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1205  ]
-[e :U 1206 ]
-[; ;Tomcat_V_driver.c: 292: Write1USART('$');
-"292
-[e ( _Write1USART (1 -> -> 36 `ui `uc ]
-[; ;Tomcat_V_driver.c: 293: while ((!TXSTA1bits.TRMT));
-"293
+[; ;Tomcat_V_driver.c: 297: while ((!TXSTA1bits.TRMT));
+"297
 [e $U 1207  ]
 [e :U 1208 ]
 [e :U 1207 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1208  ]
 [e :U 1209 ]
-[; ;Tomcat_V_driver.c: 294: Write1USART('!');
-"294
-[e ( _Write1USART (1 -> -> 33 `ui `uc ]
-[; ;Tomcat_V_driver.c: 295: while ((!TXSTA1bits.TRMT));
-"295
+[; ;Tomcat_V_driver.c: 298: Write1USART('$');
+"298
+[e ( _Write1USART (1 -> -> 36 `ui `uc ]
+[; ;Tomcat_V_driver.c: 299: while ((!TXSTA1bits.TRMT));
+"299
 [e $U 1210  ]
 [e :U 1211 ]
 [e :U 1210 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1211  ]
 [e :U 1212 ]
-[; ;Tomcat_V_driver.c: 296: Write1USART(code);
-"296
-[e ( _Write1USART (1 _code ]
-[; ;Tomcat_V_driver.c: 297: while ((!TXSTA1bits.TRMT));
-"297
+[; ;Tomcat_V_driver.c: 300: Write1USART('!');
+"300
+[e ( _Write1USART (1 -> -> 33 `ui `uc ]
+[; ;Tomcat_V_driver.c: 301: while ((!TXSTA1bits.TRMT));
+"301
 [e $U 1213  ]
 [e :U 1214 ]
 [e :U 1213 ]
 [e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1214  ]
 [e :U 1215 ]
-[; ;Tomcat_V_driver.c: 298: Write1USART('\n');
-"298
-[e ( _Write1USART (1 -> -> 10 `ui `uc ]
-[; ;Tomcat_V_driver.c: 300: }
-"300
-[e :UE 1203 ]
-}
+[; ;Tomcat_V_driver.c: 302: Write1USART(code);
 "302
+[e ( _Write1USART (1 _code ]
+[; ;Tomcat_V_driver.c: 303: while ((!TXSTA1bits.TRMT));
+"303
+[e $U 1216  ]
+[e :U 1217 ]
+[e :U 1216 ]
+[e $ ! != -> . . _TXSTA1bits 0 1 `i -> -> -> 0 `i `Vuc `i 1217  ]
+[e :U 1218 ]
+[; ;Tomcat_V_driver.c: 304: Write1USART('\n');
+"304
+[e ( _Write1USART (1 -> -> 10 `ui `uc ]
+[; ;Tomcat_V_driver.c: 306: }
+"306
+[e :UE 1206 ]
+}
+"308
 [v _Tomcat_Camera `(v ~T0 @X0 1 ef2`i`i ]
 {
-[; ;Tomcat_V_driver.c: 302: void Tomcat_Camera(int pan, int tilt) {
+[; ;Tomcat_V_driver.c: 308: void Tomcat_Camera(int pan, int tilt) {
 [e :U _Tomcat_Camera ]
 [v _pan `i ~T0 @X0 1 r1 ]
 [v _tilt `i ~T0 @X0 1 r2 ]
 [f ]
-"303
+"309
 [v _pan_pos `i ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 303: int pan_pos = analogRead(4);
+[; ;Tomcat_V_driver.c: 309: int pan_pos = analogRead(4);
 [e = _pan_pos -> ( _analogRead (1 -> -> 4 `i `uc `i ]
-"304
+"310
 [v _tilt_pos `i ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 304: int tilt_pos = analogRead(5);
+[; ;Tomcat_V_driver.c: 310: int tilt_pos = analogRead(5);
 [e = _tilt_pos -> ( _analogRead (1 -> -> 5 `i `uc `i ]
-[; ;Tomcat_V_driver.c: 308: }
-"308
-[e :UE 1216 ]
+[; ;Tomcat_V_driver.c: 314: }
+"314
+[e :UE 1219 ]
 }
-"311
+"317
 [v _analogRead `(ui ~T0 @X0 1 ef1`uc ]
 {
-[; ;Tomcat_V_driver.c: 311: unsigned int analogRead(char channel) {
+[; ;Tomcat_V_driver.c: 317: unsigned int analogRead(char channel) {
 [e :U _analogRead ]
 [v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"312
-[v _num `ui ~T0 @X0 1 a ]
-[; ;Tomcat_V_driver.c: 312: unsigned int num = 0;
-[e = _num -> -> 0 `i `ui ]
-[; ;Tomcat_V_driver.c: 313: ADCON0bits.CHS = channel;
-"313
-[e = . . _ADCON0bits 1 2 _channel ]
-[; ;Tomcat_V_driver.c: 314: ADCON0bits.GO = 1;
-"314
-[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-[; ;Tomcat_V_driver.c: 315: while (ADCON0bits.GO == 1);
-"315
-[e $U 1218  ]
-[e :U 1219 ]
-[e :U 1218 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1219  ]
-[e :U 1220 ]
-[; ;Tomcat_V_driver.c: 316: num = ADRES;
-"316
-[e = _num -> _ADRES `ui ]
-[; ;Tomcat_V_driver.c: 317: return (num);
-"317
-[e ) _num ]
-[e $UE 1217  ]
-[; ;Tomcat_V_driver.c: 318: }
 "318
-[e :UE 1217 ]
+[v _num `ui ~T0 @X0 1 a ]
+[; ;Tomcat_V_driver.c: 318: unsigned int num = 0;
+[e = _num -> -> 0 `i `ui ]
+[; ;Tomcat_V_driver.c: 319: ADCON0bits.CHS = channel;
+"319
+[e = . . _ADCON0bits 1 2 _channel ]
+[; ;Tomcat_V_driver.c: 320: ADCON0bits.GO = 1;
+"320
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;Tomcat_V_driver.c: 321: while (ADCON0bits.GO == 1);
+"321
+[e $U 1221  ]
+[e :U 1222 ]
+[e :U 1221 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 1222  ]
+[e :U 1223 ]
+[; ;Tomcat_V_driver.c: 322: num = ADRES;
+"322
+[e = _num -> _ADRES `ui ]
+[; ;Tomcat_V_driver.c: 323: return (num);
+"323
+[e ) _num ]
+[e $UE 1220  ]
+[; ;Tomcat_V_driver.c: 324: }
+"324
+[e :UE 1220 ]
 }
